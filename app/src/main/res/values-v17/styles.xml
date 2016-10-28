@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+        <style name="CommodityItemToggleMarker">
+                <item name="android:layout_width">@dimen/widget_medium_small_size</item>
+                <item name="android:layout_height">@dimen/widget_medium_small_size</item>
+                <item name="android:button">@drawable/marker_toggle_btn</item>
+                <item name="android:background">@null</item>
+                <item name="android:textOff"></item>
+                <item name="android:textOn"></item>
+                <item name="android:layout_alignParentTop">true</item>
+                <item name="android:layout_alignParentRight">true</item>
+                <item name="android:layout_alignParentEnd">true</item>
+                <item name="android:layout_margin">@dimen/collection_spacing_small</item>
+        </style>
+</resources>

@@ -3,51 +3,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <ImageView
+    <View
         android:id="@+id/iv_commodity_avt"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/ic_gold"
         android:layout_above="@+id/layout_detail"/>
     <LinearLayout
         android:id="@+id/layout_detail"
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="36dp"
+        android:layout_height="@dimen/widget_medium_small_size"
         android:layout_alignParentBottom="true"
-        >
+        android:background="@color/colorPrimaryLight">
         <TextView
             android:id="@+id/tv_price"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="7482"
-            android:textSize="18sp"
             android:gravity="center_vertical|left"
-            android:padding="8dp"
             android:textColor="@color/indexEqual"
-            android:background="@color/colorPrimaryLight"/>
+            style="@style/CommodityItemText" />
         <TextView
             android:id="@+id/tv_changed"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="1.13"
-            android:textSize="18sp"
             android:gravity="center_vertical|right"
-            android:padding="8dp"
             android:textColor="@color/indexMore"
-            android:background="@color/colorPrimaryLight"/>
+            style="@style/CommodityItemText"/>
     </LinearLayout>
-    <ToggleButton
-        android:layout_width="36dp"
-        android:layout_height="36dp"
-        android:button="@drawable/ic_star"
-        android:checked="true"
-        android:background="#DD888888"
-        android:textOff=""
-        android:textOn=""
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+    <ToggleButton style="@style/CommodityItemToggleMarker" />
 </RelativeLayout>

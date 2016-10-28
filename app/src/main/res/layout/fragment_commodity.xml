@@ -8,9 +8,7 @@
 
     <GridView
         android:id="@+id/gridView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:numColumns="3"
         android:layout_gravity="center_horizontal"
-        tools:listitem="@layout/commodity_grid_item" />
+        tools:listitem="@layout/commodity_grid_item"
+        style="@style/CommodityGridView" />
 </LinearLayout>

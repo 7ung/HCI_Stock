@@ -1,5 +1,6 @@
 package com.se215h12.hci_stock.fragments;
 
+import android.annotation.TargetApi;
 import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
@@ -12,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.se215h12.hci_stock.R;
@@ -19,6 +21,7 @@ import com.se215h12.hci_stock.StockHCIApplication;
 import com.se215h12.hci_stock.data.Commodity;
 import com.se215h12.hci_stock.data.Index;
 import com.se215h12.hci_stock.util.Utils;
+import com.se215h12.hci_stock.widgets.CommodityItem;
 
 /**
  * Created by TungHo on 10/27/2016.
@@ -55,7 +58,7 @@ public class CommodityFragment extends Fragment {
                 this.getContext(),
                 R.layout.commodity_grid_item,
                 R.id.tv_price,
-                Commodity.dummyGolds));
+                Commodity.woods));
         return v;
     }
 
@@ -66,7 +69,6 @@ public class CommodityFragment extends Fragment {
             super(context, resource, textViewResourceId, objects);
         }
 
-
         @Override
         public View getView(int position, @Nullable View convertView,
                             @NonNull ViewGroup parent)
@@ -76,16 +78,15 @@ public class CommodityFragment extends Fragment {
 
             initName(v, commodity);
             initChange(v, commodity);
-
-            ViewGroup.LayoutParams lp =  v.getLayoutParams();
-            lp.height = lp.width;
-
+            int w = CommodityFragment.this.gridView.getColumnWidth();
+            v.setLayoutParams(new ViewGroup.LayoutParams(w, w));
+            v.findViewById(R.id.iv_commodity_avt).setBackgroundResource(commodity.getImage());
             return v;
         }
 
         private void initName(View v, Commodity commodity) {
             TextView tv = (TextView) v.findViewById(R.id.tv_price);
-            tv.setText(String.valueOf(commodity.getPrice()));
+            tv.setText(Utils.format(commodity.getPrice()));
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
                 Utils.trendColor_M(getContext(), tv, commodity.getChanged());
@@ -95,12 +96,13 @@ public class CommodityFragment extends Fragment {
 
         private void initChange(View v, Commodity commodity) {
             TextView tv = (TextView) v.findViewById(R.id.tv_changed);
-            tv.setText(String.valueOf(commodity.getChanged()));
+            tv.setText(Utils.format(commodity.getChanged()));
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
                 Utils.trendColor_M(getContext(), tv, commodity.getChanged());
             else
                 Utils.trendColor(getContext(), tv, commodity.getChanged());
         }
+
     }
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:color="@android:color/transparent" android:state_checked="true"/>
-    <item android:color="@color/colorPrimary" android:state_checked="false"/>
+    <item android:drawable="@drawable/ic_selected_36dp" android:state_checked="true"/>
+    <item android:drawable="@drawable/ic_unselected_36dp" android:state_checked="false"/>
 </selector>
