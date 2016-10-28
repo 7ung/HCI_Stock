@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="36dp"
+    android:background="@color/colorSecondary"
+    android:paddingLeft="@dimen/screen_padding_small"
+    android:paddingRight="@dimen/screen_padding_small">
+    <TextView
+        android:id="@+id/tv_stock_name_header"
+        android:text="@string/tv_grid_header_1"
+        style="@style/GridViewHeader_TextContent" />
+    <TextView
+        android:id="@+id/tv_price_header"
+        android:text="@string/tv_grid_header_2"
+        style="@style/GridViewHeader_NumericContent" />
+    <TextView
+        android:id="@+id/tv_price_changed_header"
+        android:text="@string/tv_grid_header_3"
+        style="@style/GridViewHeader_NumericContent" />
+    <TextView
+        android:id="@+id/tv_value_header"
+        android:text="@string/tv_grid_header_4"
+        style="@style/GridViewHeader_NumericContent" />
+    <TextView
+        android:id="@+id/tv_volume_header"
+        android:text="@string/tv_grid_header_5"
+        style="@style/GridViewHeader_NumericContent" />
+</LinearLayout>

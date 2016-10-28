@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#E0E0E0</color>
+    <color name="colorPrimaryDark">#9E9E9E</color>
+    <color name="colorPrimaryLight">#F5F5F5</color>
+
+    <color name="colorSecondary">#B0BEC5</color>
+    <color name="colorSecondaryLight">#ECEFF1</color>
+    <color name="colorSecondaryDark">#78909C</color>
+
+    <color name="colorAccent">#42A5F5</color>
+    <color name="colorAccentDark">#01579B</color>
+    <drawable name="bg_tab_indiactor_shadow">#333333</drawable>
+
+    <color name="indexMore">#00c853</color>
+    <color name="indexEqual">#FFD600</color>
+    <color name="indexLess">#D5D50000</color>
+    <color name="orangeA700">#FF6D00</color>
+
+    <color name="DarkPrimaryText">#DE000000</color>
+    <color name="DarkSecondaryText">#DE505050</color>
+    <color name="PrimaryTextLight">@android:color/white</color>
+    <color name="SecondaryTextLight">#B4FFFFFF</color>
+
+    <color name="soft_grey">#CCCCCC</color>
+    <color name="medium_hard_grey">#DDDDDD</color>
+    <color name="medium_hard_grey_2">#D6D6D6D6</color>
+</resources>

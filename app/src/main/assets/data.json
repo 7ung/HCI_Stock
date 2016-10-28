@@ -1,0 +1,458 @@
+[
+    {
+      "code": "ABI",
+      "name": "Công ty Cổ phần Bảo hiểm Ngân hàng Nông nghiệp",
+      "industry": "Bảo hiểm",
+      "index": "UpCom"
+    },
+    {
+      "code": "BIC",
+      "name": "Tổng Công ty Cổ phần Bảo Hiểm Ngân hàng Đầu tư và Phát triển Việt Nam",
+      "industry": "Bảo hiểm",
+      "index": "VNIndex"
+    },
+    {
+      "code": "BLI",
+      "name": "Tổng Công ty Cổ phần Bảo Hiểm Bảo Long",
+      "industry": "Bảo hiểm",
+      "index": "UpCom"
+    },
+    {
+      "code": "BMI",
+      "name": "Tổng Công ty Cổ phần Bảo Minh",
+      "industry": "Bảo hiểm",
+      "index": "VNIndex"
+    },
+    {
+      "code": "BVH",
+      "name": "Tập đoàn Bảo Việt",
+      "industry": "Bảo hiểm",
+      "index": "VNIndex"
+    },
+    {
+      "code": "PGI",
+      "name": "Tổng Công ty Cổ phần Bảo hiểm Petrolimex",
+      "industry": "Bảo hiểm",
+      "index": "VNIndex"
+    },
+    {
+      "code": "PTI",
+      "name": "Tổng Công ty Cổ phần bảo hiểm bưu điện",
+      "industry": "Bảo hiểm",
+      "index": "HNX"
+    },
+    {
+      "code": "PVI",
+      "name": "Công ty Cổ phần PVI",
+      "industry": "Bảo hiểm",
+      "index": "HNX"
+    },
+    {
+      "code": "VNR",
+      "name": "Tổng Công ty Cổ phần tái bảo hiểm quốc gia Việt Nam",
+      "industry": "Bảo hiểm",
+      "index": "HNX"
+    },
+    {
+      "code": "ASM",
+      "name": "Công ty Cổ phần Tập đoàn Sao Mai",
+      "industry": "Bất động sản",
+      "index": "VNIndex"
+    },
+    {
+      "code": "BII",
+      "name": "Công ty Cổ phần Đầu tư và Phát triển Công nghiệp Bảo Thư",
+      "industry": "Bất động sản",
+      "index": "VNIndex"
+    },
+    {
+      "code": "C21",
+      "name": "Công ty Cổ phần Thế kỷ 21",
+      "industry": "Bất động sản",
+      "index": "UpCom"
+    },
+    {
+      "code": "CCL",
+      "name": "CCông ty Cổ phần Đầu tư và Phát triển Đô thị Dầu khí Cửu Long",
+      "industry": "Bất động sản",
+      "index": "VNIndex"
+    },
+    {
+      "code": "CEO",
+      "name": "Công ty Cổ phần Đầu tư C.E.O",
+      "industry": "Bất động sản",
+      "index": "HNX"
+    },
+    {
+      "code": "CIG",
+      "name": "Công ty Cổ phần COMA18",
+      "industry": "Bất động sản",
+      "index": "VNIndex"
+    },
+    {
+      "code": "CII",
+      "name": "Công ty Cổ phần Đầu tư Hạ tầng Kỹ thuật Thành phố Hồ Chí Minh",
+      "industry": "Bất động sản",
+      "index": "VNIndex"
+    },
+    {
+      "code": "CLG",
+      "name": "Công ty Cổ phần Đầu tư và Phát triển Nhà đất Cotec",
+      "industry": "Bất động sản",
+      "index": "VNIndex"
+    },
+    {
+      "code": "CSC",
+      "name": "Công ty Cổ phần Đầu tư và Xây dựng Thành Nam",
+      "industry": "Bất động sản",
+      "index": "HNX"
+    },
+    {
+      "code": "LTC",
+      "name": "Công ty Cổ phần Điện nhẹ Viễn thông",
+      "industry": "Công nghệ",
+      "index": "HNX"
+    },
+    {
+      "code": "ONE",
+      "name": "Công ty Cổ phần Truyền thông số 1",
+      "industry": "Công nghệ",
+      "index": "HNX"
+    },
+    {
+      "code": "PMJ",
+      "name": "Công ty Cổ phần vật tư Bưu điện",
+      "industry": "Công nghệ",
+      "index": "UpCom"
+    },
+    {
+      "code": "PMT",
+      "name": "Công ty Cổ phần vật liệu bưu điện TELVINA",
+      "industry": "Công nghệ",
+      "index": "UpCom"
+    },
+    {
+      "code": "POT",
+      "name": "Công ty Cổ phần Thiết bị Bưu Điện",
+      "industry": "Công nghệ",
+      "index": "HNX"
+    },
+    {
+      "code": "PSD",
+      "name": "Công ty Cổ phần Dịch vụ Phân phối Tổng hợp Dầu khí",
+      "industry": "Công nghệ",
+      "index": "HNX"
+    },
+    {
+      "code": "SAM",
+      "name": "Công ty Cổ phần Đầu tư và Phát triển SACOM",
+      "industry": "Công nghệ",
+      "index": "VNIndex"
+    },
+    {
+      "code": "SGT",
+      "name": "Công ty Cổ phần Công nghệ Viễn thông Sài Gòn",
+      "industry": "Công nghệ",
+      "index": "VNIndex"
+    },
+    {
+      "code": "SMT",
+      "name": "Công ty Cổ phần Vật liệu Điện và Viễn thông Sam Cường",
+      "industry": "Công nghệ",
+      "index": "HNX"
+    }    ,
+    {
+      "code": "PET",
+      "name": "Tổng Công ty Cổ phần Dịch vụ Tổng hợp Dầu khí",
+      "industry": "Du lịch & Giải trí",
+      "index": "VNIndex"
+    },
+    {
+      "code": "RIC",
+      "name": "Công ty Cổ phần Quốc tế Hoàng Gia",
+      "industry": "Du lịch & Giải trí",
+      "index": "VNIndex"
+    },
+    {
+      "code": "SGH",
+      "name": "Công ty Cổ phần Khách sạn Sài Gòn",
+      "industry": "Du lịch & Giải trí",
+      "index": "HNX"
+    },
+    {
+      "code": "STT",
+      "name": "Công ty Cổ phần Vận chuyển Sài Gòn Tourist",
+      "industry": "Du lịch & Giải trí",
+      "index": "VNIndex"
+    },
+    {
+      "code": "TCT",
+      "name": "Công ty Cổ phần Cáp treo Núi Bà Tây Ninh",
+      "industry": "Du lịch & Giải trí",
+      "index": "VNIndex"
+    },
+    {
+      "code": "TTR",
+      "name": "Công ty Cổ phần Du lịch Thương mại và Đầu tư",
+      "industry": "Du lịch & Giải trí",
+      "index": "UpCom"
+    },
+    {
+      "code": "VIR",
+      "name": "Công ty Cổ phần Du lịch Quốc tế Vũng Tàu",
+      "industry": "Du lịch & Giải trí",
+      "index": "UpCom"
+    },
+    {
+      "code": "VNG",
+      "name": "Công ty Cổ phần Du lịch Thành Thành Công",
+      "industry": "Du lịch & Giải trí",
+      "index": "VNIndex"
+    },
+    {
+      "code": "VNS",
+      "name": "Công ty Cổ phần Ánh Dương Việt Nam",
+      "industry": "Du lịch & Giải trí",
+      "index": "VNIndex"
+    },
+    {
+      "code": "VTG",
+      "name": "Công ty Cổ phần du lịch tỉnh Bà Rịa - Vũng Tàu",
+      "industry": "Du lịch & Giải trí",
+      "index": "UpCom"
+    },
+    {
+      "code": "PCG",
+      "name": "Công ty Cổ phần Đầu tư Phát triển Gas Đô thị",
+      "industry": "Dầu khí",
+      "index": "HNX"
+    },
+    {
+      "code": "PCN",
+      "name": "Công ty cổ phần Hóa phẩm Dầu khí DMC - Miền Bắc",
+      "industry": "Dầu khí",
+      "index": "HNX"
+    },
+    {
+      "code": "PEQ",
+      "name": "Công ty Cổ phần Thiết bị xăng dầu Petrolimex",
+      "industry": "Dầu khí",
+      "index": "UpCom"
+    },
+    {
+      "code": "POV",
+      "name": "Công ty Cổ phần Xăng dầu Dầu khí Vũng Áng",
+      "industry": "Dầu khí",
+      "index": "UpCom"
+    },
+    {
+      "code": "PPI",
+      "name": "Công ty Cổ phần Xăng dầu Dầu khí Phú Yên",
+      "industry": "Dầu khí",
+      "index": "HNX"
+    },
+    {
+      "code": "PVB",
+      "name": "Công ty Cổ phần Bọc Ống Dầu khí Việt Nam",
+      "industry": "Dầu khí",
+      "index": "HNX"
+    },
+    {
+      "code": "PVC",
+      "name": "Tổng Công ty cổ phần Dung dịch khoan và Hóa phẩm Dầu khí",
+      "industry": "Dầu khí",
+      "index": "HNX"
+    },
+    {
+      "code": "PVD",
+      "name": "Tổng Công ty Cổ phần Khoan và Dịch vụ khoan dầu khí",
+      "industry": "Dầu khí",
+      "index": "VNIndex"
+    },
+    {
+      "code": "PVO",
+      "name": "Công ty Cổ phần DẦU NHỜN PV OIL",
+      "industry": "Dầu khí",
+      "index": "UpCom"
+    },
+    {
+      "code": "PVS",
+      "name": "Tổng Công ty Cổ phần Dịch vụ Kỹ thuật Dầu khí Việt Nam",
+      "industry": "Dầu khí",
+      "index": "HNX"
+    },
+    {
+      "code": "SFC",
+      "name": "Công ty Cổ phần Nhiên Liệu Sài Gòn",
+      "industry": "Dầu khí",
+      "index": "VNIndex"
+    },
+    {
+      "code": "SSN",
+      "name": "Công ty Cổ phần xuất nhập khẩu thủy sản Sài Gòn",
+      "industry": "Dịch vụ bán lẻ",
+      "index": "UpCom"
+    },
+    {
+      "code": "TIE",
+      "name": "Công ty Cổ phần TIE",
+      "industry": "Dịch vụ bán lẻ",
+      "index": "VNIndex"
+    },
+    {
+      "code": "TLG",
+      "name": "Công ty Cổ phần Tập đoàn Thiên Long",
+      "industry": "Dịch vụ bán lẻ",
+      "index": "VNIndex"
+    },
+    {
+      "code": "TMC",
+      "name": "Công ty Cổ phần Thương mại Xuất nhập khẩu Thủ Đức",
+      "industry": "Dịch vụ bán lẻ",
+      "index": "HNX"
+    },
+    {
+      "code": "TNA",
+      "name": "Công ty Cổ phần Thương Mại Xuất Nhập Khẩu Thiên Nam",
+      "industry": "Dịch vụ bán lẻ",
+      "index": "VNIndex"
+    },
+    {
+      "code": "TTH",
+      "name": "Công ty Cổ phần Thương mại và Dịch vụ Tiến Thành",
+      "industry": "Dịch vụ bán lẻ",
+      "index": "HNX"
+    },
+    {
+      "code": "VMD",
+      "name": "Công ty Cổ phần Y Dược phẩm Vimedimex",
+      "industry": "Dịch vụ bán lẻ",
+      "index": "VNIndex"
+    },
+    {
+      "code": "VNB",
+      "name": "Công ty cổ phần Sách Việt Nam",
+      "industry": "Dịch vụ bán lẻ",
+      "index": "UpCom"
+    },
+    {
+      "code": "ASP",
+      "name": "Công ty Cổ phần Tập đoàn Dầu khí An Pha",
+      "industry": "Dịch vụ tiện ích",
+      "index": "VNIndex"
+    },
+    {
+      "code": "BDW",
+      "name": "Công ty Cổ phần Cấp thoát nước Bình Định",
+      "industry": "Dịch vụ tiện ích",
+      "index": "UpCom"
+    },
+    {
+      "code": "BTP",
+      "name": "Công ty Cổ phần Nhiệt điện Bà Rịa",
+      "industry": "Dịch vụ tiện ích",
+      "index": "VNIndex"
+    },
+    {
+      "code": "BTW",
+      "name": "Công ty Cổ phần Cấp nước Bến Thành",
+      "industry": "Dịch vụ tiện ích",
+      "index": "UpCom"
+    },
+    {
+      "code": "BWA",
+      "name": "Công ty Cổ phần Cấp thoát nước và Xây dựng Bảo Lộc",
+      "industry": "Dịch vụ tiện ích",
+      "index": "UpCom"
+    },
+    {
+      "code": "CHP",
+      "name": "Công ty Cổ phần Thủy điện miền Trung",
+      "industry": "Dịch vụ tiện ích",
+      "index": "VNIndex"
+    },
+    {
+      "code": "CLW",
+      "name": "Công ty Cổ phần Cấp nước Chợ Lớn",
+      "industry": "Dịch vụ tiện ích",
+      "index": "VNIndex"
+    },
+    {
+      "code": "CNG",
+      "name": "Công ty Cổ phần CNG Việt Nam",
+      "industry": "Dịch vụ tiện ích",
+      "index": "VNIndex"
+    },
+    {
+      "code": "CTW",
+      "name": "Công ty Cổ phần Cấp thoát nước Cần Thơ",
+      "industry": "Dịch vụ tiện ích",
+      "index": "UpCom"
+    },
+    {
+      "code": "DNW",
+      "name": "Công ty Cổ phần Cấp nước Đồng Nai",
+      "industry": "Dịch vụ tiện ích",
+      "index": "UpCom"
+    },
+    {
+      "code": "DTN",
+      "name": "Công ty Cổ phần Diêm Thống Nhất",
+      "industry": "Tài nguyên",
+      "index": "UpCom"
+    },
+    {
+      "code": "FCM",
+      "name": "Công ty Cổ phần Khoáng sản FECON",
+      "industry": "Tài nguyên",
+      "index": "VNIndex"
+    },
+    {
+      "code": "HAP",
+      "name": "Công ty Cổ phần Tập đoàn HAPACO",
+      "industry": "Tài nguyên",
+      "index": "VNIndex"
+    },
+    {
+      "code": "HGM",
+      "name": "Công ty Cổ phần Cơ khí và Khoáng sản Hà Giang",
+      "industry": "Tài nguyên",
+      "index": "HNX"
+    },
+    {
+      "code": "HLA",
+      "name": "Công ty Cổ phần Hữu Liên Á Châu",
+      "industry": "Tài nguyên",
+      "index": "UpCom"
+    },
+    {
+      "code": "HLC",
+      "name": "Công ty Cổ phần Than Hà Lầm - Vinacomin",
+      "industry": "Tài nguyên",
+      "index": "HNX"
+    },
+    {
+      "code": "HMC",
+      "name": "Công ty Cổ phần Kim khí Thành phố Hồ Chí Minh - VNSTEEL",
+      "industry": "Tài nguyên",
+      "index": "VNIndex"
+    },
+    {
+      "code": "HPG",
+      "name": "Công ty cổ phần Tập đoàn Hòa Phát",
+      "industry": "Tài nguyên",
+      "index": "VNIndex"
+    },
+    {
+      "code": "HPM",
+      "name": "Công ty Cổ phần Xây dựng Thương mại và Khoáng sản Hoàng Phúc",
+      "industry": "Tài nguyên",
+      "index": "HNX"
+    },
+    {
+      "code": "HSG",
+      "name": "Công ty Cổ phần Tập đoàn Hoa Sen",
+      "industry": "Tài nguyên",
+      "index": "VNIndex"
+    }
+]

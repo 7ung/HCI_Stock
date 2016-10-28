@@ -1,0 +1,65 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:actionBarDivider">@color/colorAccent</item>
+
+    </style>
+
+    <style name="GridViewItem">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
+    </style>
+
+    <style name="TextGridViewItem" parent="GridViewItem">
+        <item name="android:gravity">center_vertical|left</item>
+    </style>
+    <style name="NumericGridViewItem" parent="GridViewItem">
+        <item name="android:gravity">center_vertical|right</item>
+    </style>
+
+    <style name="GridViewHeader_TextContent" parent="TextGridViewItem">
+        <item name="android:background">@color/colorSecondary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/DarkSecondaryText</item>
+        <item name="android:textSize">@dimen/text_size_medium_small</item>
+
+    </style>
+
+    <style name="GridViewHeader_NumericContent" parent="NumericGridViewItem">
+        <item name="android:background">@color/colorSecondary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/DarkSecondaryText</item>
+        <item name="android:textSize">@dimen/text_size_medium_small</item>
+
+    </style>
+
+    <style name="CustomTabWidgetText"
+        parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="ToolBar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/widget_medium_size</item>
+        <item name="android:background">@drawable/white_grey_gradient_color</item>
+    </style>
+
+    <style name="PrimaryText">
+        <item name="android:textColor">@color/DarkPrimaryText</item>
+        <item name="android:textSize">@dimen/text_size_medium_big</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="PageTitle" parent="PrimaryText">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:drawableLeft">@drawable/ic_stock_32dp</item>
+        <item name="android:drawablePadding">@dimen/screen_padding_medium_small</item>
+    </style>
+</resources>

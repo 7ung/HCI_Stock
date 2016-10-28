@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimaryLight">
+
+    <LinearLayout
+        android:id="@+id/layout_items"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:paddingLeft="@dimen/screen_padding_small"
+        android:paddingRight="@dimen/screen_padding_small">
+        <TextView
+            android:id="@+id/tv_stock_name"
+            android:text="Lorem"
+            style="@style/TextGridViewItem"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/tv_price"
+            android:text="Lorem"
+            style="@style/NumericGridViewItem" />
+        <TextView
+            android:id="@+id/tv_price_changed"
+            android:text="Lorem"
+            style="@style/NumericGridViewItem"/>
+        <TextView
+            android:id="@+id/tv_value"
+            android:text="Lorem"
+            style="@style/NumericGridViewItem"
+            android:textColor="@color/colorAccentDark"/>
+        <TextView
+            android:id="@+id/tv_volume"
+            android:text="Lorem"
+            style="@style/NumericGridViewItem"
+            android:textColor="@color/colorAccentDark"/>
+    </LinearLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/stroke_medium"
+        android:background="@color/medium_hard_grey_2"
+        android:layout_marginLeft="@dimen/screen_padding_medium_2"
+        android:layout_marginRight="@dimen/screen_padding_medium_2"
+        android:layout_below="@+id/layout_items"/>
+</RelativeLayout>
