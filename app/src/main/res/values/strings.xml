@@ -16,4 +16,33 @@
     <string name="tv_grid_header_4">Giá trị</string>
     <string name="tv_grid_header_5">K. lượng</string>
 
+    <string name="woods_group_name">Hàng hoá phổ biến</string>
+    <string-array name="woods">
+        <item>gold</item>
+        <item>silver</item>
+        <item>oil</item>
+        <item>gas</item>
+        <item>coffee</item>
+        <item>sugar</item>
+        <item>corn</item>
+    </string-array>
+
+    <string name="currency_group_name">Tiền tệ</string>
+    <string-array name="currencies">
+        <item>usd</item>
+        <item>eur</item>
+        <item>pound</item>
+        <item>sgd</item>
+        <item>hkd</item>
+    </string-array>
+
+
+    <string name="bank_interest_group_name">Lãi xuất ngân hàng</string>
+    <string-array name="interests">
+        <item>vcb</item>
+        <item>acb</item>
+        <item>vib</item>
+        <item>tcb</item>
+        <item>abb</item>
+    </string-array>
 </resources>

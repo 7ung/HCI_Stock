@@ -1,14 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="16dp">
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <GridView
-        android:id="@+id/gridView"
-        android:layout_gravity="center_horizontal"
-        tools:listitem="@layout/commodity_grid_item"
-        style="@style/CommodityGridView" />
-</LinearLayout>
+    <LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <com.se215h12.hci_stock.widgets.GroupCommodityItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="4dp"
+            android:paddingBottom="8dp"
+            app:nameRes="@string/woods_group_name"
+            app:icon="@drawable/ic_ev_station_black_36dp"
+            app:items="@array/woods"/>
+
+        <com.se215h12.hci_stock.widgets.GroupCommodityItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:nameRes="@string/currency_group_name"
+            app:icon="@drawable/ic_euro_symbol_black_36dp"
+            app:items="@array/currencies"/>
+
+        <com.se215h12.hci_stock.widgets.GroupCommodityItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:nameRes="@string/bank_interest_group_name"
+            app:icon="@drawable/ic_account_balance_black_36dp"
+            app:items="@array/interests"/>
+        <!--<RelativeLayout-->
+        <!--android:id="@+id/layout_group_header"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@color/colorPrimaryLight"-->
+        <!--android:elevation="2dp">-->
+        <!--&lt;!&ndash;Todo: nếu trên máy dưới 21 cho cái gridview show/hide, không cho anim&ndash;&gt;-->
+        <!--<TextView-->
+        <!--android:id="@+id/tv_commdity_group"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Hàng hoá phổ biến"-->
+        <!--android:textColor="@color/DarkPrimaryText"-->
+        <!--android:textSize="18sp"-->
+        <!--android:layout_marginTop="@dimen/screen_padding_medium_2"-->
+        <!--android:layout_marginBottom="@dimen/screen_padding_small"-->
+        <!--android:drawableLeft="@drawable/ic_ev_station_black_36dp"-->
+        <!--android:drawablePadding="@dimen/screen_padding_small"-->
+        <!--android:drawableTint="@color/DarkPrimaryText"-->
+        <!--android:gravity="center_vertical"/>-->
+        <!--<ImageView-->
+        <!--android:id="@+id/ib_expand_more"-->
+        <!--android:layout_width="36dp"-->
+        <!--android:layout_height="36dp"-->
+        <!--android:src="@drawable/ic_expand_more_black_36dp"-->
+        <!--android:tint="@color/colorSecondaryDark"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:visibility="visible"/>-->
+        <!--<ImageView-->
+        <!--android:id="@+id/ib_expand_less"-->
+        <!--android:layout_width="36dp"-->
+        <!--android:layout_height="36dp"-->
+        <!--android:src="@drawable/ic_expand_less_black_36dp"-->
+        <!--android:tint="@color/colorSecondaryDark"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:visibility="gone"/>-->
+        <!--</RelativeLayout>-->
+
+        <!--<GridView-->
+        <!--android:id="@+id/gridView"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--tools:listitem="@layout/widget_commodity_grid_item"-->
+        <!--android:scrollbars="none"-->
+        <!--style="@style/CommodityGridView" />-->
+    </LinearLayout>
+
+</ScrollView>

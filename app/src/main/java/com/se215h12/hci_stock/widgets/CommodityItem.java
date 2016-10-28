@@ -49,7 +49,7 @@ public class CommodityItem extends RelativeLayout{
     }
 
     private void initLayout(Context context){
-        View v = LayoutInflater.from(context).inflate(R.layout.commodity_grid_item, parent, false);
+        View v = LayoutInflater.from(context).inflate(R.layout.widget_commodity_grid_item, parent, false);
 //        ViewGroup.LayoutParams lp = v.getLayoutParams();
 //        lp.height = lp.width;
 //        v.setLayoutParams(lp);

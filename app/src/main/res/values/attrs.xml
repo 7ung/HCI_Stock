@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable  name="GroupCommodityItem">
+        <attr name="name" format="string"/>
+        <attr name="nameRes" format="reference"/>
+        <attr name="icon" format="reference"/>
+        <attr name="items" format="reference"/>
+    </declare-styleable >
+</resources>

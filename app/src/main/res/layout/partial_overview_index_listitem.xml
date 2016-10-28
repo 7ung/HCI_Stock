@@ -33,7 +33,7 @@
         <TextView
             android:id="@+id/tv_volume"
             android:text="Lorem"
-            style="@style/NumericGridViewItem"
+            style="@style/VolumeTrade_GridViewItem"
             android:textColor="@color/colorAccentDark"/>
     </LinearLayout>
     <FrameLayout

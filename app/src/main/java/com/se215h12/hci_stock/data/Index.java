@@ -22,9 +22,10 @@ public class Index {
         this.name = name;
         price = (float) (500 * Math.random() + 300);
         changedValue = (float) (200 * Math.random() - 100);
+        changedValue = ((int)(Math.random() * 18) == 8) ? 0 : changedValue;
         changedRatio = (price - changedValue) / price;
         value = (float) (2000 * Math.random() + 500);
-        volume = (float) (80000000 * Math.random() + 70000000);
+        volume = (float) (80000000 * Math.random() + 70000000) / 1000;
 
         if (changedValue < 0){
             changedRatio *= -1;

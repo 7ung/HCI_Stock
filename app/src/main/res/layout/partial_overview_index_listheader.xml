@@ -25,5 +25,5 @@
     <TextView
         android:id="@+id/tv_volume_header"
         android:text="@string/tv_grid_header_5"
-        style="@style/GridViewHeader_NumericContent" />
+        style="@style/VolumeTrade_GridViewHeader" />
 </LinearLayout>

@@ -1,4 +1,4 @@
-package com.se215h12.hci_stock.fragments;
+package com.se215h12.hci_stock.widgets.fragments;
 
 import android.content.Context;
 import android.net.Uri;

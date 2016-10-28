@@ -1,10 +1,12 @@
 package com.se215h12.hci_stock.data;
 
 import android.support.annotation.DrawableRes;
+import android.text.TextUtils;
 
 import com.se215h12.hci_stock.R;
 
 import java.util.HashMap;
+import java.util.Objects;
 
 /**
  * Created by TungHo on 10/27/2016.
@@ -20,27 +22,82 @@ public class Commodity {
     public static Commodity create(String name){
         Commodity commodity = new Commodity();
         commodity.name = name;
-        if (name == "gold"){
+
+        if (TextUtils.equals(name, "gold")){
             commodity = initGold(commodity);
-        } else if (name == "silver") {
+        } else if (TextUtils.equals(name, "silver")) {
             commodity = initSilver(commodity);
-        } else if (name == "oil") {
+        } else if (TextUtils.equals(name, "oil")) {
             commodity = initOil(commodity);
-
-        } else if (name == "gas") {
+        } else if (TextUtils.equals(name, "gas")) {
             commodity = initGas(commodity);
-
-        } else if (name == "coffee") {
+        } else if (TextUtils.equals(name, "coffee")) {
             commodity = initCoffee(commodity);
-
-        } else if (name == "sugar") {
+        } else if (TextUtils.equals(name, "sugar")) {
             commodity = initSugar(commodity);
-
-        } else if (name == "corn") {
+        } else if (TextUtils.equals(name, "corn")) {
             commodity = initCorn(commodity);
+        }else if (TextUtils.equals(name, "usd")){
+            commodity = initUse(commodity);
+        }else if (TextUtils.equals(name, "eur")){
+            commodity = initEur(commodity);
+        }else if (TextUtils.equals(name, "pound")){
+            commodity = initPound(commodity);
+        }else if (TextUtils.equals(name, "sgd")){
+            commodity = initSgd(commodity);
+        }else if (TextUtils.equals(name, "hkd")){
+            commodity = initHkd(commodity);
+        }else if (TextUtils.equals(name, "vcb")){
+            commodity = initInterestedBank(commodity);
+        }else if (TextUtils.equals(name, "acb")){
+            commodity = initInterestedBank(commodity);
+        }else if (TextUtils.equals(name, "vib")){
+            commodity = initInterestedBank(commodity);
+        }else if (TextUtils.equals(name, "tcb")){
+            commodity = initInterestedBank(commodity);
+        }else if (TextUtils.equals(name, "abb")){
+            commodity = initInterestedBank(commodity);
         }
+
+        commodity.changed = ((int)(Math.random() * 18) == 15 ) ? 0 : commodity.changed / 8;
         commodity.image = mappingBackgroundRes.get(commodity.getName());
 
+        return commodity;
+    }
+
+    private static Commodity initInterestedBank(Commodity commodity) {
+        commodity.price = (float) (6 * Math.random() + 7);        // % percent
+        commodity.changed = (float) (6 * Math.random() - 3);
+        return commodity;
+    }
+
+    private static Commodity initHkd(Commodity commodity) {
+        commodity.price = (float) (300 * Math.random() + 2700);        // Đồng
+        commodity.changed = (float) (300 * Math.random() - 150);
+        return commodity;
+    }
+
+    private static Commodity initSgd(Commodity commodity) {
+        commodity.price = (float) (2000 * Math.random() + 15000);        // Đồng
+        commodity.changed = (float) (2000 * Math.random() - 1000);
+        return commodity;
+    }
+
+    private static Commodity initPound(Commodity commodity) {
+        commodity.price = (float) (9000 * Math.random() + 26000);        // Đồng
+        commodity.changed = (float) (9000 * Math.random() - 4500);
+        return commodity;
+    }
+
+    private static Commodity initEur(Commodity commodity) {
+        commodity.price = (float) (3000 * Math.random() + 23000);        // Đồng
+        commodity.changed = (float) (3000 * Math.random() - 1500);
+        return commodity;
+    }
+
+    private static Commodity initUse(Commodity commodity) {
+        commodity.price = (float) (2000 * Math.random() + 21000);        // Đồng
+        commodity.changed = (float) (2000 * Math.random() - 1000);
         return commodity;
     }
 
@@ -109,17 +166,19 @@ public class Commodity {
         mappingBackgroundRes.put("coffee", R.drawable.bg_coffee);
         mappingBackgroundRes.put("sugar", R.drawable.bg_sugar);
         mappingBackgroundRes.put("corn", R.drawable.bg_corn);
+        mappingBackgroundRes.put("usd", R.drawable.bg_usd);
+        mappingBackgroundRes.put("eur", R.drawable.bg_euro);
+        mappingBackgroundRes.put("pound", R.drawable.bg_pound);
+        mappingBackgroundRes.put("sgd", R.drawable.bg_sgd);
+        mappingBackgroundRes.put("hkd", R.drawable.bg_hkd);
+        mappingBackgroundRes.put("vcb", R.drawable.bg_vcb);
+        mappingBackgroundRes.put("acb", R.drawable.bg_acb);
+        mappingBackgroundRes.put("vib", R.drawable.bg_vib);
+        mappingBackgroundRes.put("tcb", R.drawable.bg_tcb);
+        mappingBackgroundRes.put("abb", R.drawable.bg_abb);
+
     }
 
-    public static Commodity[] woods = new Commodity[]{
-            Commodity.create("gold"),
-            Commodity.create("silver"),
-            Commodity.create("oil"),
-            Commodity.create("gas"),
-            Commodity.create("coffee"),
-            Commodity.create("sugar"),
-            Commodity.create("corn")
-    };
 
     public int getImage() {
         return image;

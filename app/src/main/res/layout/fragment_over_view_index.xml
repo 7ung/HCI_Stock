@@ -2,18 +2,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.se215h12.hci_stock.fragments.OverViewIndexFragment">
+    tools:context=".widgets.fragments.OverViewIndexFragment">
 
     <include
         android:id="@+id/listheader"
         android:layout_width="match_parent"
         android:layout_height="@dimen/widget_medium_small_size"
-        layout="@layout/overview_index_listheader"/>
+        layout="@layout/partial_overview_index_listheader"/>
     <ListView
         android:id="@+id/listview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/listheader"
         android:divider="@null"
-        tools:listitem="@layout/overview_index_listitem" />
+        tools:listitem="@layout/partial_overview_index_listitem" />
 </RelativeLayout>

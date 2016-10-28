@@ -1,10 +1,6 @@
-package com.se215h12.hci_stock.fragments;
+package com.se215h12.hci_stock.widgets.fragments;
 
-import android.annotation.SuppressLint;
-import android.annotation.TargetApi;
 import android.content.Context;
-import android.icu.text.DecimalFormat;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -18,13 +14,10 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.se215h12.hci_stock.R;
-import com.se215h12.hci_stock.StockHCIApplication;
 import com.se215h12.hci_stock.data.Index;
 import com.se215h12.hci_stock.util.Utils;
 
 import junit.framework.Assert;
-
-import java.util.List;
 
 public class OverViewIndexFragment extends Fragment {
 
@@ -91,14 +84,14 @@ public class OverViewIndexFragment extends Fragment {
         Assert.assertNotNull(indexes);
         listView.setAdapter(new IndexViewAdapter(
                 this.getContext(),
-                R.layout.overview_index_listitem,
+                R.layout.partial_overview_index_listitem,
                 R.id.tv_stock_name,
                 indexes));
 
-        if (StockHCIApplication.getInstance().getPreferences().isShowVolume())
-            header.findViewById(R.id.tv_value_header).setVisibility(View.GONE);
-        else
-            header.findViewById(R.id.tv_volume_header).setVisibility(View.GONE);
+//        if (StockHCIApplication.getInstance().getPreferences().isShowVolume())
+//            header.findViewById(R.id.tv_value_header).setVisibility(View.GONE);
+//        else
+//            header.findViewById(R.id.tv_volume_header).setVisibility(View.GONE);
 
         return v;
     }
@@ -157,10 +150,10 @@ public class OverViewIndexFragment extends Fragment {
             TextView volume = (TextView) v.findViewById(R.id.tv_volume);
             volume.setText( Utils.format(index.getVolume()));
 
-            if (StockHCIApplication.getInstance().getPreferences().isShowVolume())
-                value.setVisibility(View.GONE);
-            else
-                volume.setVisibility(View.GONE);
+//            if (StockHCIApplication.getInstance().getPreferences().isShowVolume())
+//                value.setVisibility(View.GONE);
+//            else
+//                volume.setVisibility(View.GONE);
 
             return v;
         }

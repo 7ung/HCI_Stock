@@ -4,30 +4,20 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.app.FragmentTabHost;
 import android.support.v4.util.Pair;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.widget.TabHost;
-import android.widget.TabWidget;
 
-import com.se215h12.hci_stock.fragments.BlankFragment;
-import com.se215h12.hci_stock.fragments.CommodityFragment;
-import com.se215h12.hci_stock.fragments.OverViewIndexFragment;
+import com.se215h12.hci_stock.widgets.fragments.CommodityFragment;
+import com.se215h12.hci_stock.widgets.fragments.OverViewIndexFragment;
 import com.se215h12.hci_stock.util.Utils;
 import com.se215h12.hci_stock.widgets.activity.BaseActivity;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.TreeMap;
-import static com.se215h12.hci_stock.fragments.OverViewIndexFragment.PAGE_NAME;
+
+import static com.se215h12.hci_stock.widgets.fragments.OverViewIndexFragment.PAGE_NAME;
 
 public class HomeActivity extends BaseActivity {
 

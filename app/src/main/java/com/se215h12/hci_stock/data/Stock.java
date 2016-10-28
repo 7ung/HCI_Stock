@@ -78,6 +78,7 @@ public class Stock {
         st.minPrice = (float) (st.refPrice * (1 + deltaRatio * Utils.randNegativeOne()));
 
         st.changed = (float) (st.refPrice *  deltaRatio * Utils.randNegativeOne());
+        st.changed = ((int)(Math.random() * 18) == 8) ? 0 : st.changed;
         st.changedRatio = st.changed / st.refPrice * 100;
         st.price = st.changed + st.refPrice;
 

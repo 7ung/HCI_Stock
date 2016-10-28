@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <style name="VolumeTrade_GridViewHeader" parent="GridViewHeader_NumericContent">
+        <item name="android:visibility">visible</item>
+    </style>
+
+    <style name="VolumeTrade_GridViewItem" parent="NumericGridViewItem">
+        <item name="android:visibility">visible</item>
+    </style>
+
     <style name="CommodityGridView">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
