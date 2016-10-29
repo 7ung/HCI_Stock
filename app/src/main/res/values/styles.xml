@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
@@ -59,7 +59,6 @@
     </style>
     <style name="PageTitle" parent="PrimaryText">
         <item name="android:gravity">center_vertical</item>
-        <item name="android:drawableLeft">@drawable/ic_stock_32dp</item>
         <item name="android:drawablePadding">@dimen/screen_padding_medium_small</item>
     </style>
 
@@ -71,13 +70,23 @@
         <item name="android:padding">@dimen/screen_padding_small</item>
     </style>
 
-    <style name="CommodityItemToggleMarker">
+    <style name="CommonToggleButton">
         <item name="android:layout_width">@dimen/widget_medium_small_size</item>
         <item name="android:layout_height">@dimen/widget_medium_small_size</item>
-        <item name="android:button">@drawable/marker_toggle_btn</item>
         <item name="android:background">@null</item>
         <item name="android:textOff"></item>
         <item name="android:textOn"></item>
+    </style>
+
+    <style name="FullScreenToggleButton" parent="CommonToggleButton">
+        <item name="android:button">@drawable/ic_fullscreen_black_36dp</item>
+        <item name="android:layout_marginRight">@dimen/screen_padding_medium_2</item>
+        <item name="android:layout_marginBottom">@dimen/screen_padding_medium_2</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
+    <style name="CommodityItemToggleMarker" parent="CommonToggleButton">
+        <item name="android:button">@drawable/marker_toggle_btn</item>
         <item name="android:layout_alignParentTop">true</item>
         <item name="android:layout_alignParentRight">true</item>
         <item name="android:layout_margin">@dimen/collection_spacing_small</item>
@@ -91,4 +100,45 @@
         <item name="android:horizontalSpacing">2dp</item>
         <item name="android:verticalSpacing">2dp</item>
     </style>
+
+    <style name="CommonWidgetMarigin">
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:layout_marginTop">4dp</item>
+    </style>
+
+    <style name="MediumTextDark" parent="CommonWidgetMarigin">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/DarkSecondaryText</item>
+        <item name="android:layout_height">32dp</item>
+    </style>
+
+    <style name="MediumTextDark_Label" parent="MediumTextDark">
+        <item name="android:gravity">center_vertical|right</item>
+        <item name="android:paddingRight">2dp</item>
+    </style>
+
+    <style name="MediumTextDark_Detail" parent="MediumTextDark" >
+        <item name="android:gravity">center_vertical|left</item>
+    </style>
+
+    <style name="TextOnlyRadioButton" parent="CommonWidgetMarigin">
+        <item name="android:textSize">14sp</item>
+        <item name="android:button">@null</item>
+        <item name="android:textColor">@color/DarkPrimaryText</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="TextOnlyRadioButton.GroupRangeChart">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="RadioGroup">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/widget_small_size</item>
+        <item name="android:gravity">center</item>
+        <item name="android:elevation" tools:targetApi="lollipop">2dp</item>
+    </style>
+
 </resources>

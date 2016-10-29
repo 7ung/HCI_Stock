@@ -26,8 +26,7 @@ public abstract class BaseActivity  extends AppCompatActivity {
         initEventListener();
     }
 
-    protected void initView()
-    {
+    protected void initView(){
         mToolBar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolBar);
     }

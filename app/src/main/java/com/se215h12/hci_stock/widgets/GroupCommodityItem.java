@@ -4,9 +4,9 @@ import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.os.Build;
-import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -15,14 +15,20 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
 import android.widget.ArrayAdapter;
-import android.widget.GridView;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.ToggleButton;
 
+import com.se215h12.hci_stock.CommodityDetailActivity;
 import com.se215h12.hci_stock.R;
 import com.se215h12.hci_stock.data.Commodity;
 import com.se215h12.hci_stock.util.Utils;
+import com.squareup.picasso.Picasso;
+
+import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * Created by TungHo on 10/28/2016.
@@ -34,8 +40,14 @@ public class GroupCommodityItem  extends LinearLayout implements View.OnClickLis
     private ExpandableHeightGridView gridView;
     private ImageView expandmore;
     private ImageView expandless;
+    private ImageView background;
 
-    private Commodity[] commodities;
+    private Commodity[] commodities = new Commodity[0];
+    private boolean isCollapse;
+
+    private static ArrayList<Commodity> markedList = new ArrayList<>();
+    private static GroupCommodityItem markedGroup = null;
+    public static HashMap<String, GroupCommodityItem> _hash = new HashMap<>();
 
     public GroupCommodityItem(Context context) {
         super(context);
@@ -80,7 +92,7 @@ public class GroupCommodityItem  extends LinearLayout implements View.OnClickLis
 
     private void initLayout(Context context, AttributeSet atrs) throws Exception {
         View v = LayoutInflater.from(context).inflate(R.layout.widget_group_commity, this, true);gridView = (ExpandableHeightGridView) v.findViewById(R.id.gridView);
-        gridView.setExpanded(true);
+        getGridView().setExpanded(true);
 
         expandmore = (ImageView) v.findViewById(R.id.ib_expand_more);
         expandless = (ImageView) v.findViewById(R.id.ib_expand_less);
@@ -93,6 +105,7 @@ public class GroupCommodityItem  extends LinearLayout implements View.OnClickLis
         int listArray = typedArray.getResourceId(R.styleable.GroupCommodityItem_items, 0);
         String headerTitle = typedArray.getString(R.styleable.GroupCommodityItem_name);
         int nameRes = typedArray.getResourceId(R.styleable.GroupCommodityItem_nameRes, 0);
+        isCollapse = typedArray.getBoolean(R.styleable.GroupCommodityItem_collapse, false);
 
         if (headerTitle != null && nameRes == 0)
             throw new Exception("Not allow declare attr:name and attr:nameRes at the same time");
@@ -104,6 +117,7 @@ public class GroupCommodityItem  extends LinearLayout implements View.OnClickLis
         } else if (nameRes != 0){
             header.setText(getContext().getResources().getString(nameRes));
         }
+
         if (listArray != 0){
             String[] ws = getContext().getResources().getStringArray(listArray);
             commodities = new Commodity[ws.length];
@@ -112,16 +126,31 @@ public class GroupCommodityItem  extends LinearLayout implements View.OnClickLis
             }
         }
 
-        if (commodities != null && commodities.length != 0)
-            gridView.setAdapter(new GridViewAdapter(
+        if (this.header.getText() == getContext().getResources().getString(R.string.marked_group_name)){
+            commodities = new Commodity[markedList.size()];
+            markedList.toArray(commodities);
+            markedGroup = this;
+        }
+
+        if (commodities != null /*&& commodities.length != 0*/)
+            getGridView().setAdapter(new GridViewAdapter(
                     this.getContext(),
-                    R.layout.widget_commodity_grid_item,        // ?
-                    R.id.tv_price,                              // ?
-                    commodities));                          // ?
+                    commodities));
+
+        if (isCollapse){
+            expandmore.setVisibility(VISIBLE);
+            expandless.setVisibility(GONE);
+            getGridView().setVisibility(GONE);
+        }else {
+            expandmore.setVisibility(GONE);
+            expandless.setVisibility(VISIBLE);
+            getGridView().setVisibility(VISIBLE);
+        }
+
+        _hash.put(header.getText().toString(), this);
     }
 
     private void initEventListener() {
-
         expandmore.setOnClickListener(this);
         expandless.setOnClickListener(this);
     }
@@ -134,7 +163,7 @@ public class GroupCommodityItem  extends LinearLayout implements View.OnClickLis
         switch (v.getId()){
             case R.id.ib_expand_less:
                 //                gridView.startAnimation(AnimationUtils.loadAnimation(this.getContext(), R.anim.collapse_anim));
-                anim = new TranslateAnimation(0.0f, 0.0f, 0.0f,- gridView.getMeasuredHeight());
+                anim = new TranslateAnimation(0.0f, 0.0f, 0.0f,- getGridView().getMeasuredHeight());
                 anim.setDuration(400);
                 anim.setAnimationListener(new Animation.AnimationListener() {
                     @Override
@@ -144,7 +173,7 @@ public class GroupCommodityItem  extends LinearLayout implements View.OnClickLis
 
                     @Override
                     public void onAnimationEnd(Animation animation) {
-                        gridView.setVisibility(View.GONE);
+                        getGridView().setVisibility(View.GONE);
                     }
 
                     @Override
@@ -154,10 +183,12 @@ public class GroupCommodityItem  extends LinearLayout implements View.OnClickLis
                 });
                 expandmore.setVisibility(View.VISIBLE);
                 expandless.setVisibility(View.GONE);
-                gridView.startAnimation(anim);
+                getGridView().startAnimation(anim);
+                isCollapse = !isCollapse;
+
                 break;
             case R.id.ib_expand_more:
-                anim = new TranslateAnimation(0.0f, 0.0f, - gridView.getMeasuredHeight(), 0.0f);
+                anim = new TranslateAnimation(0.0f, 0.0f, - getGridView().getMeasuredHeight(), 0.0f);
                 anim.setDuration(400);
                 anim.setAnimationListener(new Animation.AnimationListener() {
                     @Override
@@ -176,19 +207,61 @@ public class GroupCommodityItem  extends LinearLayout implements View.OnClickLis
                 });
                 expandmore.setVisibility(View.GONE);
                 expandless.setVisibility(View.VISIBLE);
-                gridView.setVisibility(View.VISIBLE);
-                gridView.startAnimation(anim);
+                getGridView().setVisibility(View.VISIBLE);
+                getGridView().startAnimation(anim);
+                isCollapse = !isCollapse;
 
                 break;
         }
 
     }
 
+    public ExpandableHeightGridView getGridView() {
+        return gridView;
+    }
+
+    public void initMarkerList(){
+        for (HashMap.Entry<String, Commodity> c :
+                Commodity._hash.entrySet()) {
+            if (c.getValue().isMarked() && !markedList.contains(c)){
+                markedList.add(c.getValue());
+            }
+        }
+
+    }
+
+    public void validateMarkedList() {
+        Commodity[] commodities = new Commodity[markedList.size()];
+        markedList.toArray(commodities);
+        this.getGridView().setAdapter(new GridViewAdapter(this.getContext(), commodities));
+    }
+
+    private boolean isContains(String commodityName){
+        for (int i = 0; i < commodities.length; ++i ){
+            if(TextUtils.equals(commodities[i].getName(), commodityName))
+                return true;
+        }
+        return false;
+    }
+    private static void validateAll(String commodityName) {
+        for (HashMap.Entry<String, GroupCommodityItem> entry
+                     : GroupCommodityItem._hash.entrySet()){
+            if (entry.getValue().isContains(commodityName))
+                entry.getValue().validate();
+        }
+    }
+
+    private void validate() {
+        ArrayAdapter adapter = (ArrayAdapter) getGridView().getAdapter();
+        adapter.notifyDataSetChanged();
+        getGridView().invalidateViews();
+        getGridView().setAdapter(adapter);
+    }
 
     private class GridViewAdapter extends ArrayAdapter<Commodity> {
 
-        public GridViewAdapter(Context context, @LayoutRes int resource, int textViewResourceId, Commodity[] objects) {
-            super(context, resource, textViewResourceId, objects);
+        public GridViewAdapter(Context context, Commodity[] objects) {
+            super(context, R.layout.widget_commodity_grid_item, R.id.tv_price, objects);
         }
 
         @Override
@@ -196,13 +269,37 @@ public class GroupCommodityItem  extends LinearLayout implements View.OnClickLis
                             @NonNull ViewGroup parent)
         {
             View v = super.getView(position, convertView, parent);
-            Commodity commodity = getItem(position);
+            final Commodity commodity = getItem(position);
 
             initName(v, commodity);
             initChange(v, commodity);
-            int w = GroupCommodityItem.this.gridView.getColumnWidth();
+            initBackground(v, commodity);
+
+            int w = GroupCommodityItem.this.getGridView().getColumnWidth();
             v.setLayoutParams(new ViewGroup.LayoutParams(w, w));
-            v.findViewById(R.id.iv_commodity_avt).setBackgroundResource(commodity.getImage());
+//            v.findViewById(R.id.iv_commodity_avt).setBackgroundResource(commodity.getImage());
+
+
+            ToggleButton marker = ((ToggleButton)v.findViewById(R.id.tb_marker));
+            marker.setChecked(commodity.isMarked());
+            marker.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    commodity.setMarked(!commodity.isMarked());
+                    if (isChecked) {
+                        if (!GroupCommodityItem.markedList.contains(commodity)) {
+                            GroupCommodityItem.markedList.add(commodity);
+                        }
+                    } else {
+                        if (GroupCommodityItem.markedList.contains(commodity)) {
+                            GroupCommodityItem.markedList.remove(commodity);
+                        }
+                    }
+                    GroupCommodityItem.markedGroup.validateMarkedList();
+                    GroupCommodityItem.validateAll(commodity.getName());
+
+                }
+            });
             return v;
         }
 
@@ -235,5 +332,22 @@ public class GroupCommodityItem  extends LinearLayout implements View.OnClickLis
             }
         }
 
+        private void initBackground(View v, final Commodity commodity) {
+
+            ImageView iv = (ImageView) v.findViewById(R.id.iv_commodity_avt);
+            if (v.isInEditMode())
+                iv.setBackgroundResource(commodity.getImage());
+            else
+                Picasso.with(getContext()).load(commodity.getImage())
+                        .into(iv);
+            iv.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    CommodityDetailActivity.create(getContext(), commodity.getName());
+                }
+            });
+        }
     }
+
+
 }

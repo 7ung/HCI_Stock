@@ -3,11 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <View
+    <ImageView
         android:id="@+id/iv_commodity_avt"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/layout_detail"/>
+        android:layout_height="match_parent"/>
     <LinearLayout
         android:id="@+id/layout_detail"
         android:orientation="horizontal"
@@ -27,5 +26,7 @@
             android:drawablePadding="3dp"
             style="@style/CommodityItemText"/>
     </LinearLayout>
-    <ToggleButton style="@style/CommodityItemToggleMarker" />
+    <ToggleButton
+        android:id="@+id/tb_marker"
+        style="@style/CommodityItemToggleMarker" />
 </RelativeLayout>

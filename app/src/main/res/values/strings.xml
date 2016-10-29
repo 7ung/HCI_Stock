@@ -16,6 +16,8 @@
     <string name="tv_grid_header_4">Giá trị</string>
     <string name="tv_grid_header_5">K. lượng</string>
 
+    <string name="marked_group_name">Marked</string>
+
     <string name="woods_group_name">Hàng hoá phổ biến</string>
     <string-array name="woods">
         <item>gold</item>

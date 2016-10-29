@@ -5,8 +5,6 @@ import android.content.Context;
 import android.os.Build;
 import android.widget.TextView;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.se215h12.hci_stock.R;
 import com.se215h12.hci_stock.data.Stock;
 
@@ -26,9 +24,6 @@ public class Utils {
 
     private static final String DEFAULT_STRING_FORMAT = "%.2f";
     private Utils(){}
-
-    public static Gson gson = new GsonBuilder().create();
-
 
     public static String format(float number)
     {
