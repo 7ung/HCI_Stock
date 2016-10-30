@@ -13,6 +13,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.se215h12.hci_stock.IndexDetailActivity;
 import com.se215h12.hci_stock.R;
 import com.se215h12.hci_stock.data.Index;
 import com.se215h12.hci_stock.util.Utils;
@@ -149,6 +150,15 @@ public class OverViewIndexFragment extends Fragment {
 
             TextView volume = (TextView) v.findViewById(R.id.tv_volume);
             volume.setText( Utils.format(index.getVolume()));
+
+
+            //todo: test
+            v.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    IndexDetailActivity.create(getContext());
+                }
+            });
 
 //            if (StockHCIApplication.getInstance().getPreferences().isShowVolume())
 //                value.setVisibility(View.GONE);

@@ -9,6 +9,7 @@ import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.se215h12.hci_stock.data.Stock;
 import com.se215h12.hci_stock.widgets.fragments.CommodityFragment;
 import com.se215h12.hci_stock.widgets.fragments.OverViewIndexFragment;
 import com.se215h12.hci_stock.util.Utils;
@@ -24,11 +25,12 @@ public class HomeActivity extends BaseActivity {
     private ViewPager viewPager;
     private TabLayout tabLayout;
 
+    public static ArrayList<Stock> _stock;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         try {
-            Utils.loadAllStock(this, "data.json");
+            _stock = Utils.loadAllStock(this, "data.json");
         } catch (Exception e) {
             Log.d("", e.getMessage());
         }

@@ -16,13 +16,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Hàng hoá phổ biến"
-            android:textColor="@color/DarkPrimaryText"
+            android:textColor="@color/PrimaryTextDark"
             android:textSize="18sp"
             android:layout_marginTop="@dimen/screen_padding_medium_2"
             android:layout_marginBottom="@dimen/screen_padding_small"
             android:drawableLeft="@drawable/ic_ev_station_black_36dp"
             android:drawablePadding="@dimen/screen_padding_small"
-            android:drawableTint="@color/DarkPrimaryText"
+            android:drawableTint="@color/PrimaryTextDark"
             android:gravity="center_vertical"/>
         <ImageView
             android:id="@+id/ib_expand_more"

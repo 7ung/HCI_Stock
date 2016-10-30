@@ -21,6 +21,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="Lorem"
+                android:textAllCaps="true"
                 style="@style/PageTitle"/>
         </android.support.v7.widget.Toolbar>
 
@@ -112,7 +113,7 @@
             <RadioButton
                 android:id="@+id/rbtn_1d"
                 android:text="1D"
-                android:checked="true"
+                android:checked="false"
                 style="@style/TextOnlyRadioButton.GroupRangeChart"/>
             <View
                 android:layout_width="1dp"
@@ -129,6 +130,7 @@
             <RadioButton
                 android:id="@+id/rbtn_1w"
                 android:text="1W"
+                android:checked="true"
                 style="@style/TextOnlyRadioButton.GroupRangeChart" />
             <View
                 android:layout_width="1dp"
@@ -186,7 +188,7 @@
         android:paddingLeft="@dimen/screen_padding_small"
         android:paddingRight="@dimen/screen_padding_small"
         android:layout_toLeftOf="@+id/tb_marker"
-        android:gravity="right"
+        android:gravity="left"
         style="@style/RadioGroup"
         tools:ignore="UnusedAttribute">
         <RadioButton
@@ -195,17 +197,28 @@
             android:layout_height="match_parent"
             android:text="lorem"
             android:checked="true"
-            android:button="@drawable/ic_radio_button_checked_black_24dp"
-            android:layout_marginLeft="@dimen/screen_padding_small"
-            android:layout_marginRight="@dimen/screen_padding_small"/>
+            android:button="@drawable/radio_btn_unit"
+            android:enabled="false"
+            android:tag="0"
+            style="@style/WidgetMarginMedium"/>
         <RadioButton
             android:id="@+id/rbtb_unit_2"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="lorem"
-            android:button="@drawable/ic_radio_button_checked_black_24dp"
-            android:layout_marginLeft="@dimen/screen_padding_small"
-            android:layout_marginRight="@dimen/screen_padding_small"/>
+            android:button="@drawable/radio_btn_unit"
+            style="@style/WidgetMarginMedium"
+            android:tag="1"
+            android:visibility="invisible"/>
+        <RadioButton
+            android:id="@+id/rbtb_unit_3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="lorem"
+            android:button="@drawable/radio_btn_unit"
+            style="@style/WidgetMarginMedium"
+            android:tag="2"
+            android:visibility="invisible"/>
 
     </RadioGroup>
 

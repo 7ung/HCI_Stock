@@ -27,7 +27,7 @@
     <style name="GridViewHeader_TextContent" parent="TextGridViewItem">
         <item name="android:background">@color/colorSecondary</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@color/DarkSecondaryText</item>
+        <item name="android:textColor">@color/SecondaryTextDark</item>
         <item name="android:textSize">@dimen/text_size_medium_small</item>
 
     </style>
@@ -35,7 +35,7 @@
     <style name="GridViewHeader_NumericContent" parent="NumericGridViewItem">
         <item name="android:background">@color/colorSecondary</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@color/DarkSecondaryText</item>
+        <item name="android:textColor">@color/SecondaryTextDark</item>
         <item name="android:textSize">@dimen/text_size_medium_small</item>
 
     </style>
@@ -53,7 +53,7 @@
     </style>
 
     <style name="PrimaryText">
-        <item name="android:textColor">@color/DarkPrimaryText</item>
+        <item name="android:textColor">@color/PrimaryTextDark</item>
         <item name="android:textSize">@dimen/text_size_medium_big</item>
         <item name="android:textStyle">bold</item>
     </style>
@@ -101,14 +101,26 @@
         <item name="android:verticalSpacing">2dp</item>
     </style>
 
-    <style name="CommonWidgetMarigin">
+    <style name="CommonWidgetMargin">
         <item name="android:layout_marginBottom">4dp</item>
         <item name="android:layout_marginTop">4dp</item>
     </style>
 
-    <style name="MediumTextDark" parent="CommonWidgetMarigin">
+    <style name="WidgetMarginMedium">
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+    </style>
+
+    <style name="HintText" parent="CommonWidgetMargin">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:layout_marginLeft">4dp</item>
+        <item name="android:gravity">center_vertical|left</item>
+    </style>
+
+    <style name="MediumTextDark" parent="CommonWidgetMargin">
         <item name="android:textSize">14sp</item>
-        <item name="android:textColor">@color/DarkSecondaryText</item>
+        <item name="android:textColor">@color/SecondaryTextDark</item>
         <item name="android:layout_height">32dp</item>
     </style>
 
@@ -121,11 +133,12 @@
         <item name="android:gravity">center_vertical|left</item>
     </style>
 
-    <style name="TextOnlyRadioButton" parent="CommonWidgetMarigin">
+    <style name="TextOnlyRadioButton" parent="CommonWidgetMargin">
         <item name="android:textSize">14sp</item>
         <item name="android:button">@null</item>
-        <item name="android:textColor">@color/DarkPrimaryText</item>
+        <item name="android:textColor">@color/PrimaryTextDark</item>
         <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/toogle_btn_light_selector</item>
     </style>
 
     <style name="TextOnlyRadioButton.GroupRangeChart">

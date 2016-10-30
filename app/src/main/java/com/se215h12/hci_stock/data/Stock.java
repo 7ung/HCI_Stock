@@ -2,8 +2,6 @@ package com.se215h12.hci_stock.data;
 
 import com.se215h12.hci_stock.util.Utils;
 
-import java.util.Random;
-
 /**
  * Created by TungHo on 10/27/2016.
  */
@@ -55,12 +53,12 @@ public class Stock {
     public static Stock create(String parent, String code, String name, String industry) throws Exception {
         Stock st = new Stock();
         st.parent = Index.sIndexes.get(parent);
-        if (st.parent == null)
+        if (st.getParent() == null)
             throw new Exception("not found parent");
         if (Index.sIndexes.containsKey(parent) == false)
             throw new Exception("not found parent");
 
-        st.parent.addStock(st);
+        st.getParent().addStock(st);
         float deltaRatio;
         if (parent.startsWith("VN"))
             deltaRatio = 0.075f;
@@ -73,20 +71,20 @@ public class Stock {
 
         st.refPrice = (float) (200 * Math.random());
 
-        st.openedPrice = (float) (st.refPrice * (1 + deltaRatio * Utils.randNegativeOne()));
-        st.maxPrice = (float) (st.refPrice * (1 + deltaRatio * Utils.randNegativeOne()));
-        st.minPrice = (float) (st.refPrice * (1 + deltaRatio * Utils.randNegativeOne()));
+        st.openedPrice = (float) (st.getRefPrice() * (1 + deltaRatio * Utils.randNegativeOne()));
+        st.maxPrice = (float) (st.getRefPrice() * (1 + deltaRatio * Utils.randNegativeOne()));
+        st.minPrice = (float) (st.getRefPrice() * (1 + deltaRatio * Utils.randNegativeOne()));
 
-        st.changed = (float) (st.refPrice *  deltaRatio * Utils.randNegativeOne());
-        st.changed = ((int)(Math.random() * 18) == 8) ? 0 : st.changed;
-        st.changedRatio = st.changed / st.refPrice * 100;
-        st.price = st.changed + st.refPrice;
+        st.changed = (float) (st.getRefPrice() *  deltaRatio * Utils.randNegativeOne());
+        st.changed = ((int)(Math.random() * 18) == 8) ? 0 : st.getChanged();
+        st.changedRatio = st.getChanged() / st.getRefPrice() * 100;
+        st.price = st.getChanged() + st.getRefPrice();
 
         st.reBuy = (int) (60000 * Math.random());
         st.reSell = (int) (60000 * Math.random());
 
         st.volume = (int) (2000000 *Math.random());
-        st.value = (float) ( Utils.randNegativeOne() * st.refPrice * deltaRatio * st.value);
+        st.value = (float) ( Utils.randNegativeOne() * st.getRefPrice() * deltaRatio * st.value);
 
         st.foreignBuy = (int) (120000 * Math.random());
         st.foreignSell = (int) (120000 * Math.random());
@@ -104,4 +102,51 @@ public class Stock {
     }
 
 
+    public Index getParent() {
+        return parent;
+    }
+
+    public String getStockName() {
+        return stockName;
+    }
+
+    public String getCompanyName() {
+        return companyName;
+    }
+
+    public String getIndustry() {
+        return industry;
+    }
+
+    public float getPrice() {
+        return price;
+    }
+
+    public float getRefPrice() {
+        return refPrice;
+    }
+
+    public float getOpenedPrice() {
+        return openedPrice;
+    }
+
+    public float getMaxPrice() {
+        return maxPrice;
+    }
+
+    public float getMinPrice() {
+        return minPrice;
+    }
+
+    public float getChanged() {
+        return changed;
+    }
+
+    public float getChangedRatio() {
+        return changedRatio;
+    }
+
+    public int getReBuy() {
+        return reBuy;
+    }
 }

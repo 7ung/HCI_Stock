@@ -28,10 +28,10 @@
             app:tabBackground="@drawable/ripple_blue"
             app:tabMode="fixed"
             app:tabGravity="fill"
-            app:tabTextColor="@color/DarkPrimaryText"
+            app:tabTextColor="@color/PrimaryTextDark"
             app:tabIndicatorColor="@color/colorAccent"
             app:tabIndicatorHeight="2dp"
-            app:tabSelectedTextColor="@color/DarkPrimaryText"/>
+            app:tabSelectedTextColor="@color/PrimaryTextDark"/>
     </android.support.design.widget.AppBarLayout>
     <android.support.v4.view.ViewPager
         android:id="@+id/view_pager"
