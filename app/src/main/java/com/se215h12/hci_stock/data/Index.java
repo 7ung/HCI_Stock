@@ -1,12 +1,15 @@
 package com.se215h12.hci_stock.data;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
  * Created by TungHo on 10/26/2016.
  */
-public class Index {
+public class Index implements Parcelable{
     private String name;
     private float price;
     private float changedValue;
@@ -33,17 +36,80 @@ public class Index {
         foreignTrade = ForeignTrade.create();
     }
 
+    protected Index(Parcel in) {
+        name = in.readString();
+        price = in.readFloat();
+        changedValue = in.readFloat();
+        changedRatio = in.readFloat();
+        value = in.readFloat();
+        volume = in.readFloat();
+        foreignTrade = in.readParcelable(ForeignTrade.class.getClassLoader());
+    }
+
+    public static final Creator<Index> CREATOR = new Creator<Index>() {
+        @Override
+        public Index createFromParcel(Parcel in) {
+            return new Index(in);
+        }
+
+        @Override
+        public Index[] newArray(int size) {
+            return new Index[size];
+        }
+    };
+
     public Index addStock(Stock stock)
     {
         this.stocks.add(stock);
         return this;
     }
 
-    private static class ForeignTrade{
+    public ForeignTrade getForeignTrade() {
+        return foreignTrade;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(name);
+        dest.writeFloat(price);
+        dest.writeFloat(changedValue);
+        dest.writeFloat(changedRatio);
+        dest.writeFloat(value);
+        dest.writeFloat(volume);
+        dest.writeParcelable(foreignTrade,0);
+    }
+
+    public static class ForeignTrade implements Parcelable{
         private float inValue;
         private float outValue;
         private float inVolumne;
         private float outVolume;
+
+        protected ForeignTrade(Parcel in) {
+            inValue = in.readFloat();
+            outValue = in.readFloat();
+            inVolumne = in.readFloat();
+            outVolume = in.readFloat();
+        }
+
+        private ForeignTrade(){}
+
+        public static final Creator<ForeignTrade> CREATOR = new Creator<ForeignTrade>() {
+            @Override
+            public ForeignTrade createFromParcel(Parcel in) {
+                return new ForeignTrade(in);
+            }
+
+            @Override
+            public ForeignTrade[] newArray(int size) {
+                return new ForeignTrade[size];
+            }
+        };
 
         public float getInValue() {
             return inValue;
@@ -85,6 +151,19 @@ public class Index {
             ft.inVolumne = (float) (500 * Math.random());
             ft.outVolume = (float) (500 * Math.random());
             return  ft;
+        }
+
+        @Override
+        public int describeContents() {
+            return 0;
+        }
+
+        @Override
+        public void writeToParcel(Parcel dest, int flags) {
+            dest.writeFloat(inValue);
+            dest.writeFloat(outValue);
+            dest.writeFloat(inVolumne);
+            dest.writeFloat(outVolume);
         }
     }
 

@@ -86,7 +86,7 @@
                     android:text="Giá lớn nhất:"
                     style="@style/MediumTextDark_Label" />
                 <TextView
-                    android:id="@+id/tv_max"
+                    android:id="@+id/tv_changed"
                     android:layout_width="match_parent"
                     android:layout_weight="1"
                     android:layout_column="0"

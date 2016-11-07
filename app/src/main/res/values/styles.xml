@@ -97,31 +97,31 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:numColumns">2</item>
         <item name="android:stretchMode">columnWidth</item>
-        <item name="android:horizontalSpacing">2dp</item>
-        <item name="android:verticalSpacing">2dp</item>
+        <item name="android:horizontalSpacing">@dimen/collection_spacing_small</item>
+        <item name="android:verticalSpacing">@dimen/collection_spacing_small</item>
     </style>
 
     <style name="CommonWidgetMargin">
-        <item name="android:layout_marginBottom">4dp</item>
-        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginBottom">@dimen/screen_padding_xsmall</item>
+        <item name="android:layout_marginTop">@dimen/screen_padding_xsmall</item>
     </style>
 
     <style name="WidgetMarginMedium">
-        <item name="android:layout_marginLeft">8dp</item>
-        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:layout_marginLeft">@dimen/screen_padding_small</item>
+        <item name="android:layout_marginRight">@dimen/screen_padding_small</item>
     </style>
 
     <style name="HintText" parent="CommonWidgetMargin">
-        <item name="android:textSize">12sp</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
         <item name="android:textColor">@color/grey</item>
-        <item name="android:layout_marginLeft">4dp</item>
+        <item name="android:layout_marginLeft">@dimen/screen_padding_xsmall</item>
         <item name="android:gravity">center_vertical|left</item>
     </style>
 
     <style name="MediumTextDark" parent="CommonWidgetMargin">
         <item name="android:textSize">14sp</item>
         <item name="android:textColor">@color/SecondaryTextDark</item>
-        <item name="android:layout_height">32dp</item>
+        <item name="android:layout_height">@dimen/widget_small_size</item>
     </style>
 
     <style name="MediumTextDark_Label" parent="MediumTextDark">
@@ -143,7 +143,7 @@
 
     <style name="TextOnlyRadioButton.GroupRangeChart">
         <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">32dp</item>
+        <item name="android:layout_height">@dimen/widget_small_size</item>
         <item name="android:layout_weight">1</item>
     </style>
 
@@ -154,4 +154,59 @@
         <item name="android:elevation" tools:targetApi="lollipop">2dp</item>
     </style>
 
+    <style name="TableLayoutColumn">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="TableLayoutColumn.0">
+        <item name="android:layout_column">0</item>
+    </style>
+    <style name="TableLayoutColumn.1">
+        <item name="android:layout_column">1</item>
+    </style>
+    <style name="TableLayoutColumn.2">
+        <item name="android:layout_column">2</item>
+    </style>
+
+    <style name="PrimaryTextIndexDetail" parent="TableLayoutColumn.0">
+        <item name="android:textSize">@dimen/text_size_huge</item>
+        <item name="android:paddingRight">@dimen/screen_padding_medium_2</item>
+        <item name="android:paddingLeft">@dimen/screen_padding_medium_2</item>
+        <item name="android:paddingTop">@dimen/screen_padding_small</item>
+        <item name="android:paddingBottom">@dimen/screen_padding_xsmall</item>
+        <item name="android:gravity">center_horizontal|bottom</item>
+    </style>
+
+    <style name="MediumTextDark_Detail.TableColumn0" parent="TableLayoutColumn.0">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">0dp</item>
+    </style>
+
+    <style name="MediumTextDark_Detail.TableColumn0.TrendBar">
+        <item name="android:padding">@dimen/screen_padding_xsmall</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+
+
+    <style name="TableLayoutColumn.1.IndexDetail_Label" parent="MediumTextDark_Label.TablePadding">
+        <item name="android:layout_weight">0.35</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">bottom|right</item>
+        <item name="android:paddingRight">@dimen/screen_padding_xsmall</item>
+    </style>
+    <style name="TableLayoutColumn.1.IndexDetail_Value" parent="MediumTextDark_Label.TablePadding">
+        <item name="android:layout_weight">0.65</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">bottom|left</item>
+    </style>
+
+    <style name="MediumTextDark_Label.TablePadding">
+        <item name="android:paddingBottom">@dimen/screen_padding_small</item>
+        <item name="android:layout_margin">0dp</item>
+        <item name="android:layout_width">0dp</item>
+    </style>
 </resources>

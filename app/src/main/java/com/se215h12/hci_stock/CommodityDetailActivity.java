@@ -22,9 +22,6 @@ import com.se215h12.hci_stock.util.Utils;
 import com.se215h12.hci_stock.widgets.activity.BaseActivity;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Hashtable;
-import java.util.Iterator;
 import java.util.List;
 
 public class CommodityDetailActivity extends BaseActivity implements CompoundButton.OnCheckedChangeListener {
@@ -43,7 +40,7 @@ public class CommodityDetailActivity extends BaseActivity implements CompoundBut
     private TextView max;
     private TextView min;
 
-    private static final int[] rangeDayNumber = new int[]{
+    public static final int[] rangeDayNumber = new int[]{
             24, 72, 7, 30, 90, 180, 360
     };
 
@@ -137,7 +134,7 @@ public class CommodityDetailActivity extends BaseActivity implements CompoundBut
         lineChart = (LineChart) findViewById(R.id.chart);
         price = (TextView)findViewById(R.id.tv_price);
         chnaged = (TextView) findViewById(R.id.tv_changed);
-        max = (TextView) findViewById(R.id.tv_max);
+        max = (TextView) findViewById(R.id.tv_changed);
         min = (TextView) findViewById(R.id.tv_min);
 
         if (getResources().getConfiguration().orientation == ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)

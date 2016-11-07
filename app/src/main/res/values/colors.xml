@@ -27,4 +27,8 @@
     <color name="soft_grey">#CCCCCC</color>
     <color name="medium_hard_grey">#DDDDDD</color>
     <color name="medium_hard_grey_2">#D6D6D6D6</color>
+
+    <color name="purple_a200">#E040FB </color>
+    <color name="cyan_a200">#18FFFF</color>
+
 </resources>

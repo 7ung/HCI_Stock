@@ -135,7 +135,7 @@ public class OverViewIndexFragment extends Fragment {
         }
 
         @Override
-        public View getView(int position, @Nullable View convertView,
+        public View getView(final int position, @Nullable View convertView,
                             @NonNull ViewGroup parent)
         {
             View v = super.getView(position, convertView, parent);
@@ -156,7 +156,7 @@ public class OverViewIndexFragment extends Fragment {
             v.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    IndexDetailActivity.create(getContext());
+                    IndexDetailActivity.create(getContext(), getItem(position));
                 }
             });
 

@@ -5,6 +5,7 @@
     <dimen name="tab_indicator_height">32dp</dimen>
 
     //padding
+    <dimen name="screen_padding_xsmall">4dp</dimen>
     <dimen name="screen_padding_small">8dp</dimen>
     <dimen name="screen_padding_medium_small">12dp</dimen>
     <dimen name="screen_padding_medium">14dp</dimen>
@@ -12,11 +13,12 @@
 
 
     // text size
-    <dimen name="text_size_samll">12sp</dimen>
+    <dimen name="text_size_small">12sp</dimen>
     <dimen name="text_size_medium_small">14sp</dimen>
     <dimen name="text_size_medium">18sp</dimen>
     <dimen name="text_size_medium_big">20sp</dimen>
     <dimen name="text_size_big">22sp</dimen>
+    <dimen name="text_size_huge">32sp</dimen>
 
 
     // widget height
@@ -27,4 +29,6 @@
     <dimen name="stroke_medium">1dp</dimen>
 
     <dimen name="collection_spacing_small">2dp</dimen>
+
+    <dimen name="item_offset">4dp</dimen>
 </resources>

@@ -106,73 +106,75 @@
                     style="@style/MediumTextDark_Detail" />
             </TableRow>
         </TableLayout>
-        <RadioGroup
-            android:id="@+id/rg_range"
-            android:orientation="horizontal"
-            style="@style/RadioGroup">
-            <RadioButton
-                android:id="@+id/rbtn_1d"
-                android:text="1D"
-                android:checked="false"
-                style="@style/TextOnlyRadioButton.GroupRangeChart"/>
-            <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:background="@color/colorSecondaryLight"/>
-            <RadioButton
-                android:id="@+id/rbtn_3d"
-                android:text="3D"
-                style="@style/TextOnlyRadioButton.GroupRangeChart" />
-            <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:background="@color/colorSecondaryLight"/>
-            <RadioButton
-                android:id="@+id/rbtn_1w"
-                android:text="1W"
-                android:checked="true"
-                style="@style/TextOnlyRadioButton.GroupRangeChart" />
-            <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:background="@color/colorSecondaryLight"/>
-            <RadioButton
-                android:id="@+id/rbtn_1m"
-                android:text="1M"
-                style="@style/TextOnlyRadioButton.GroupRangeChart" />
-            <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:background="@color/colorSecondaryLight"/>
-            <RadioButton
-                android:id="@+id/rbtn_3m"
-                android:text="3M"
-                style="@style/TextOnlyRadioButton.GroupRangeChart" />
-            <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:background="@color/colorSecondaryLight"/>
-            <RadioButton
-                android:id="@+id/rbtn_6m"
-                android:text="6M"
-                style="@style/TextOnlyRadioButton.GroupRangeChart" />
-            <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:background="@color/colorSecondaryLight"/>
-            <RadioButton
-                android:id="@+id/rbtn_1y"
-                android:text="1Y"
-                style="@style/TextOnlyRadioButton.GroupRangeChart" />
-        </RadioGroup>
-        <com.github.mikephil.charting.charts.LineChart
-            android:visibility="visible"
-            android:id="@+id/chart"
+        <!--<RadioGroup-->
+            <!--android:id="@+id/rg_range"-->
+            <!--android:orientation="horizontal"-->
+            <!--style="@style/RadioGroup">-->
+            <!--<RadioButton-->
+                <!--android:id="@+id/rbtn_1d"-->
+                <!--android:text="1D"-->
+                <!--android:checked="false"-->
+                <!--style="@style/TextOnlyRadioButton.GroupRangeChart"/>-->
+            <!--<View-->
+                <!--android:layout_width="1dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:background="@color/colorSecondaryLight"/>-->
+            <!--<RadioButton-->
+                <!--android:id="@+id/rbtn_3d"-->
+                <!--android:text="3D"-->
+                <!--style="@style/TextOnlyRadioButton.GroupRangeChart" />-->
+            <!--<View-->
+                <!--android:layout_width="1dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:background="@color/colorSecondaryLight"/>-->
+            <!--<RadioButton-->
+                <!--android:id="@+id/rbtn_1w"-->
+                <!--android:text="1W"-->
+                <!--android:checked="true"-->
+                <!--style="@style/TextOnlyRadioButton.GroupRangeChart" />-->
+            <!--<View-->
+                <!--android:layout_width="1dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:background="@color/colorSecondaryLight"/>-->
+            <!--<RadioButton-->
+                <!--android:id="@+id/rbtn_1m"-->
+                <!--android:text="1M"-->
+                <!--style="@style/TextOnlyRadioButton.GroupRangeChart" />-->
+            <!--<View-->
+                <!--android:layout_width="1dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:background="@color/colorSecondaryLight"/>-->
+            <!--<RadioButton-->
+                <!--android:id="@+id/rbtn_3m"-->
+                <!--android:text="3M"-->
+                <!--style="@style/TextOnlyRadioButton.GroupRangeChart" />-->
+            <!--<View-->
+                <!--android:layout_width="1dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:background="@color/colorSecondaryLight"/>-->
+            <!--<RadioButton-->
+                <!--android:id="@+id/rbtn_6m"-->
+                <!--android:text="6M"-->
+                <!--style="@style/TextOnlyRadioButton.GroupRangeChart" />-->
+            <!--<View-->
+                <!--android:layout_width="1dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:background="@color/colorSecondaryLight"/>-->
+            <!--<RadioButton-->
+                <!--android:id="@+id/rbtn_1y"-->
+                <!--android:text="1Y"-->
+                <!--style="@style/TextOnlyRadioButton.GroupRangeChart" />-->
+        <!--</RadioGroup>-->
+        <!--<com.github.mikephil.charting.charts.LineChart-->
+            <!--android:visibility="visible"-->
+            <!--android:id="@+id/chart"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent">-->
+
+        <!--</com.github.mikephil.charting.charts.LineChart>-->
+        <include layout="@layout/partial_layout_graph"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-        </com.github.mikephil.charting.charts.LineChart>
-
+            android:layout_height="match_parent"/>
     </LinearLayout>
     <RadioGroup
         android:id="@+id/rg_unit"
