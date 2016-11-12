@@ -108,8 +108,20 @@ public class CommodityDetailActivity extends BaseActivity implements CompoundBut
         }
         super.onCreate(savedInstanceState);
 
+
+    }
+
+    @Override
+    protected void setNavigationButton(){
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getToolBar().setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
     }
 
@@ -122,12 +134,6 @@ public class CommodityDetailActivity extends BaseActivity implements CompoundBut
     @Override
     protected void initView(){
         super.initView();
-        getToolBar().setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onBackPressed();
-            }
-        });
         title = (TextView) findViewById(R.id.tv_title);
         groupRange = (RadioGroup) findViewById(R.id.rg_range);
         groupUnit = (RadioGroup) findViewById(R.id.rg_unit);

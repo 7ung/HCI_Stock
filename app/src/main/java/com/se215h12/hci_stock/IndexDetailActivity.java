@@ -33,8 +33,8 @@ import com.se215h12.hci_stock.widgets.activity.BaseActivity;
 import java.util.ArrayList;
 import java.util.List;
 
-public class IndexDetailActivity extends BaseActivity implements SearchView.OnQueryTextListener,
-        AdapterView.OnItemClickListener, View.OnClickListener, CompoundButton.OnCheckedChangeListener {
+public class IndexDetailActivity extends BaseActivity implements
+         View.OnClickListener, CompoundButton.OnCheckedChangeListener {
 
     private SearchView.SearchAutoComplete mSearchAutoComplete;
     private TextView mTvPrice;
@@ -128,13 +128,6 @@ public class IndexDetailActivity extends BaseActivity implements SearchView.OnQu
             Utils.trendColor(this, mTvPrice, index.getChangedValue());
         }
 
-//        if (index.getChangedValue() > 0){
-//            mTvChanged.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_up_10dp, 0, 0, 0);
-//        }  else if (index.getChangedValue() == 0){
-//            mTvChanged.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_unchange_10dp, 0, 0, 0);
-//        } else {
-//            mTvChanged.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_down_10dp, 0, 0, 0);
-//        }
 
         int notChange = (int) (200 * Math.random());
         int increase = (int) (200 * Math.random() + 200);
@@ -198,59 +191,27 @@ public class IndexDetailActivity extends BaseActivity implements SearchView.OnQu
         mTvNotChanged.setText(weight + " " + "(" + Utils.format(((float)weight * 100)/ total)+ "%)");
     }
 
-    private static String[] test;
+    @Override
+    protected void setNavigationButton(){
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getToolBar().setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+    }
+
+//    private static String[] test;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_search, menu);
-
-        // Associate searchable configuration with the SearchView
-        // SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
-        SearchView searchView = (SearchView) MenuItemCompat.getActionView(menu.findItem(R.id.action_search));
-        // searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
-        mSearchAutoComplete = (SearchView.SearchAutoComplete) searchView.findViewById(R.id.search_src_text);
-
-        test = new String[HomeActivity._stock.size()];
-        for (int i = 0; i < HomeActivity._stock.size(); ++i){
-            test[i] = HomeActivity._stock.get(i).getStockName()  + " - " + HomeActivity._stock.get(i).getCompanyName();
-        }
-        mSearchAutoComplete.setAdapter(new ArrayAdapter<String>(
-                this,
-                R.layout.search_suggest_list_item,
-                R.id.tv_search, test){
-            @Override
-            public View getView(int position, View convertView, ViewGroup parrent){
-                View v = super.getView(position,convertView, parrent);
-//                ((TextView )v.findViewById(R.id.tv_search)).setText(test[position]);
-                return v;
-            }
-        });
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            mSearchAutoComplete.setElevation(8.0f);
-        }
-        mSearchAutoComplete.setThreshold(1);
-
-        mSearchAutoComplete.setOnItemClickListener(this);
-        searchView.setOnQueryTextListener(this);
-
+        initMenu(menu);
         return super.onCreateOptionsMenu(menu);
     }
 
-    @Override
-    public boolean onQueryTextSubmit(String query) {
-        return false;
-    }
-
-    @Override
-    public boolean onQueryTextChange(String newText) {
-//        mSearchAutoComplete.showDropDown();
-        return false;
-    }
-
-    @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        Toast.makeText(this, ((TextView)view).getText(), Toast.LENGTH_LONG).show();
-    }
 
     private static boolean isCollapse = false;
     @Override

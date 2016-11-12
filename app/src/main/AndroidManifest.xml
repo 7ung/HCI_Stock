@@ -17,12 +17,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".CommodityDetailActivity" />
-        <activity android:name=".IndexDetailActivity">
-
-        </activity>
-        <activity android:name=".DemoActivity">
-
-        </activity>
+        <activity android:name=".IndexDetailActivity"></activity>
+        <activity android:name=".ListStockActivity"></activity>
+        <activity android:name=".StockDetailActivity"></activity>
     </application>
 
 </manifest>

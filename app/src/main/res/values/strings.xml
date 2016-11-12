@@ -15,8 +15,8 @@
     <string name="tv_grid_header_1">Chỉ số</string>
     <string name="tv_grid_header_2">Giá</string>
     <string name="tv_grid_header_3">Thay đổi</string>
-    <string name="tv_grid_header_4">Giá trị</string>
-    <string name="tv_grid_header_5">K. lượng</string>
+    <string name="tv_grid_header_4">GTGD</string>
+    <string name="tv_grid_header_5">KLGD</string>
 
     <string name="marked_group_name">Marked</string>
 
@@ -48,5 +48,40 @@
         <item>vib</item>
         <item>tcb</item>
         <item>abb</item>
+    </string-array>
+
+    <string-array name="slide_menu_items">
+        <item>Tất Cả Mã CK</item>
+        <item>Tin Tức</item>
+        <item>Danh Sách CK</item>
+        <item>Lọc Mã CK</item>
+        <item>Lịch chia cổ tức</item>
+        <item>Từ Điển</item>
+        <item>About</item>
+    </string-array>
+
+    <string-array name="sub_menu_Filter">
+        <item>Recent</item>
+        <item>Tự Tạo 1</item>
+        <item>Tự Tạo 2</item>
+    </string-array>
+
+    <string-array name="sub_menu_News">
+        <item>Tin Mới</item>
+        <item>Tin Đọc Nhiều</item>
+        <item>Tin Nước Ngoài</item>
+    </string-array>
+
+
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+
+    <string-array name="snack_bar_list">
+        <item>AAA sẽ giao dịch phiên cuối cùng tại...</item>
+        <item>Tất cả các chỉ số đều tăng điểm, HSG...</item>
+        <item>Những doanh nghiệp nổi danh thị trường chứng khoán...</item>
+        <item>VDSC: Nếu “ngã ngựa” bởi sóng KQKD quý 3,...</item>
+        <item>CTCK nhận định thị trường 08/11: Nếu ông Trump...</item>
+        <item>Một doanh nghiệp vốn hóa 4 tỷ đô chuẩn bị gia nhập sàn Upcom...</item>
     </string-array>
 </resources>

@@ -157,13 +157,10 @@ public class OverViewIndexFragment extends Fragment {
                 @Override
                 public void onClick(View v) {
                     IndexDetailActivity.create(getContext(), getItem(position));
+//                    ListStockActivity.create(getContext());
                 }
             });
 
-//            if (StockHCIApplication.getInstance().getPreferences().isShowVolume())
-//                value.setVisibility(View.GONE);
-//            else
-//                volume.setVisibility(View.GONE);
 
             return v;
         }

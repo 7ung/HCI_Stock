@@ -13,7 +13,7 @@
     <drawable name="bg_tab_indiactor_shadow">#333333</drawable>
 
     <color name="indexMore">#00c853</color>
-    <color name="indexEqual">#FFD600</color>
+    <color name="indexEqual">#FFEB3B</color>
     <color name="indexLess">#D5D50000</color>
     <color name="orangeA700">#FF6D00</color>
 
@@ -24,11 +24,13 @@
     <color name="SecondaryTextDark">#DE505050</color>
 
     <color name="grey">#6C000000</color>
+
     <color name="soft_grey">#CCCCCC</color>
     <color name="medium_hard_grey">#DDDDDD</color>
     <color name="medium_hard_grey_2">#D6D6D6D6</color>
 
     <color name="purple_a200">#E040FB </color>
-    <color name="cyan_a200">#18FFFF</color>
+    <color name="cyan_a200">#00B0FF</color>
 
+    <color name="dark_theme">#FF282828</color>
 </resources>

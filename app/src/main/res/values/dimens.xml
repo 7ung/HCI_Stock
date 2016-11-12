@@ -19,7 +19,7 @@
     <dimen name="text_size_medium_big">20sp</dimen>
     <dimen name="text_size_big">22sp</dimen>
     <dimen name="text_size_huge">32sp</dimen>
-
+    <dimen name="widget_slide_menu_width">320dp</dimen>
 
     // widget height
     <dimen name="widget_medium_size">52dp</dimen>

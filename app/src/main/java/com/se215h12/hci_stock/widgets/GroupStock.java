@@ -13,8 +13,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
+import com.se215h12.hci_stock.ListStockActivity;
 import com.se215h12.hci_stock.R;
 import com.se215h12.hci_stock.util.Utils;
 
@@ -48,8 +48,7 @@ public class GroupStock extends RelativeLayout {
         mAllButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                // todo: go to all stock page;
-                Toast.makeText(getContext(),"go to all stock page",Toast.LENGTH_LONG).show();
+                ListStockActivity.create(getContext(), "All");
             }
         });
     }
@@ -109,6 +108,13 @@ public class GroupStock extends RelativeLayout {
                         .setImageResource(datas[position].getImage());
                 ((ImageView)holder.mView.findViewById(R.id.iv_picture)).setScaleType(ImageView.ScaleType.FIT_XY);
             }
+            final int p = position;
+            holder.mView.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    ListStockActivity.create(getContext(), getDatas()[p].getName());
+                }
+            });
         }
 
         @Override
