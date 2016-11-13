@@ -1,5 +1,6 @@
 package com.se215h12.hci_stock;
 
+import android.app.Dialog;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
@@ -141,12 +142,26 @@ public class HomeActivity extends BaseActivity {
                     @Override
                     public void onClick(View v) {
                         ViewGroup vg = (ViewGroup) v.getParent();
-                        if (vg.getChildCount() > 1)
+                        if (vg.getChildCount() > 1) {
                             clearSubMenu(vg);
-                        else if (pos == 1) {
+                            return;
+                        } else if (pos == 1) {
                             initSubMenu(vg, R.array.sub_menu_News);
+                            return ;
                         } else if (pos == 2){
                             initSubMenu(vg, R.array.sub_menu_Filter);
+                            return ;
+                        }
+                        switch (pos){
+                            case 0:
+                                ListStockActivity.create(HomeActivity.this, "All");
+                                break;
+                            case 6:
+                                Dialog dialog = new Dialog(HomeActivity.this);
+                                dialog.setContentView(R.layout.dialog_about);
+                                drawLayout.closeDrawer(Gravity.LEFT);
+                                dialog.show();
+                                break;
                         }
                     }
                 });

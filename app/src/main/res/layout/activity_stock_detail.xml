@@ -3,10 +3,437 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.se215h12.hci_stock.StockDetailActivity">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            app:showAsAction="always"
+            style="@style/ToolBar">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.6"
+                    android:text="@string/tv_pagetitle_1"
+                    android:textSize="16sp"
+                    android:gravity="bottom"
+                    android:layout_marginBottom="2dp"
+                    style="@style/PageTitle" />
+                <TextView
+                    android:id="@+id/tv_sub_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/tv_pagetitle_1"
+                    android:textSize="10sp"
+                    android:textStyle="italic"
+                    android:gravity="bottom"
+                    android:layout_marginBottom="2dp"
+                    android:textColor="@color/colorAccentDark"
+                    android:singleLine="true"
+                    style="@style/PageTitle" />
+            </LinearLayout>
 
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_main_content"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/app_bar">
+        <LinearLayout
+            android:id="@+id/layout_group_industry"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nhóm ngành: "
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                style="@style/MediumTextDark"/>
+            <TextView
+                android:id="@+id/tv_industry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sản xuất thực phẩm "
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:textSize="12sp"
+                style="@style/MediumTextDark"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layout_group_price"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:layout_marginRight="16dp"
+            android:layout_below="@+id/layout_group_industry">
+            <LinearLayout
+                android:id="@+id/layout_main_price"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.62"
+                android:background="@color/indexMore">
+                <TextView
+                    android:id="@+id/tv_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.618"
+                    android:textSize="20sp"
+                    android:text="678.90"
+                    android:gravity="center"
+                    android:textColor="@color/PrimaryTextLight"/>
+                <TextView
+                    android:id="@+id/tv_price_changed"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:textSize="12sp"
+                    android:text="678.90"
+                    android:gravity="center"
+                    android:background="@drawable/bg_tv_price_changed"
+                    android:textColor="@color/SecondaryTextLight"
+                    android:drawableTint="@android:color/white"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layout_sub_price_1"
+                android:layout_height="match_parent"
+                style="@style/SubPriceLayout">
+                <TextView
+                    android:id="@+id/tv_ref_price_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tham chiếu"
+                    style="@style/SubPriceLabel"/>
+                <TextView
+                    android:id="@+id/tv_ref_price"
+                    android:layout_width="match_parent"
+                    android:text="67.89"
+                    android:textColor="@color/indexEqual"
+                    style="@style/SubPriceTextContent"/>
+                <TextView
+                    android:id="@+id/tv_open_price_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mở cửa"
+                    style="@style/SubPriceLabel"/>
+                <TextView
+                    android:id="@+id/tv_open_price"
+                    android:layout_width="match_parent"
+                    android:text="67.89"
+                    android:textColor="@color/colorAccentDark"
+                    style="@style/SubPriceTextContent"/>
+            </LinearLayout>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"/>
+            <LinearLayout
+                android:id="@+id/layout_sub_price_2"
+                android:layout_height="match_parent"
+                style="@style/SubPriceLayout">
+                <TextView
+                    android:id="@+id/tv_top_price_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Giá trần"
+                    style="@style/SubPriceLabel"/>
+                <TextView
+                    android:id="@+id/tv_top_price"
+                    android:layout_width="match_parent"
+                    android:text="67.89"
+                    android:textColor="@color/purple_a200"
+                    style="@style/SubPriceTextContent"/>
+                <TextView
+                    android:id="@+id/tv_bottom_price_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Giá sàn"
+                    style="@style/SubPriceLabel"/>
+                <TextView
+                    android:id="@+id/tv_bottom_price"
+                    android:layout_width="match_parent"
+                    android:text="67.89"
+                    android:textColor="@color/cyan_a200"
+                    style="@style/SubPriceTextContent"/>
+            </LinearLayout>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"/>
+            <LinearLayout
+                android:id="@+id/layout_sub_price_3"
+                android:layout_height="match_parent"
+                style="@style/SubPriceLayout">
+                <TextView
+                    android:id="@+id/tv_max_price_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cao nhất"
+                    style="@style/SubPriceLabel"/>
+                <TextView
+                    android:id="@+id/tv_max_price"
+                    android:layout_width="match_parent"
+                    android:text="67.89"
+                    android:textColor="@color/indexMore"
+                    style="@style/SubPriceTextContent"/>
+                <TextView
+                    android:id="@+id/tv_min_price_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Thấp nhất"
+                    style="@style/SubPriceLabel"/>
+                <TextView
+                    android:id="@+id/tv_min_price"
+                    android:layout_width="match_parent"
+                    android:text="67.89"
+                    android:textColor="@color/indexLess"
+                    style="@style/SubPriceTextContent"/>
+            </LinearLayout>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2.4dp"/>
+        <LinearLayout
+            android:id="@+id/layout_group_info_1"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/layout_group_industry"
+            style="@style/LayoutGroupInfo">
+            <TextView
+                android:id="@+id/tv_out_buy_label"
+                android:layout_height="wrap_content"
+                android:text="Dư mua: "
+                style="@style/GroupInfoLabel" />
+            <TextView
+                android:id="@+id/tv_out_buy"
+                android:layout_height="wrap_content"
+                android:text="141 000"
+                style="@style/GroupInfoText" />
+            <TextView
+                android:id="@+id/tv_value_label"
+                android:layout_height="wrap_content"
+                android:text="GTGD: "
+                style="@style/GroupInfoLabel" />
+            <TextView
+                android:id="@+id/tv_value"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.414"
+                android:text="1 492 852"
+                style="@style/GroupInfoText" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2.4dp"/>
+        <LinearLayout
+            android:id="@+id/layout_group_info_2"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/layout_group_industry"
+            style="@style/LayoutGroupInfo">
+            <TextView
+                android:id="@+id/tv_out_sell_label"
+                android:layout_height="wrap_content"
+                android:text="Dư bán: "
+                style="@style/GroupInfoLabel" />
+            <TextView
+                android:id="@+id/tv_out_sell"
+                android:layout_height="wrap_content"
+                android:text="141 200"
+                style="@style/GroupInfoText" />
+            <TextView
+                android:id="@+id/tv_volume_label"
+                android:layout_height="wrap_content"
+                android:text="KLGD: "
+                style="@style/GroupInfoLabel" />
+            <TextView
+                android:id="@+id/tv_volume"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.414"
+                android:text="789 590"
+                style="@style/GroupInfoText" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2.4dp"/>
+        <LinearLayout
+            android:id="@+id/layout_group_info_3"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/layout_group_industry"
+            style="@style/LayoutGroupInfo">
+            <TextView
+                android:id="@+id/tv_foreign_sell_label"
+                android:layout_height="wrap_content"
+                android:text="NN bán: "
+                style="@style/GroupInfoLabel" />
+            <TextView
+                android:id="@+id/tv_foreign_sell"
+                android:layout_height="wrap_content"
+                android:text="48 710"
+                style="@style/GroupInfoText" />
+            <TextView
+                android:id="@+id/tv_foreign_volume_label"
+                android:layout_height="wrap_content"
+                android:text="NN mua: "
+                style="@style/GroupInfoLabel" />
+            <TextView
+                android:id="@+id/tv_foreign_volume"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.414"
+                android:text="20 410"
+                style="@style/GroupInfoText" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2.4dp"/>
+        <LinearLayout
+            android:id="@+id/layout_group_info_4"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/layout_group_industry"
+            style="@style/LayoutGroupInfo">
+            <TextView
+                android:id="@+id/tv_beta_label"
+                android:layout_height="wrap_content"
+                android:text="Beta: "
+                style="@style/GroupInfoLabel" />
+            <TextView
+                android:id="@+id/tv_beta"
+                android:layout_height="wrap_content"
+                android:text="0.61"
+                style="@style/GroupInfoText" />
+            <TextView
+                android:id="@+id/tv_eps_label"
+                android:layout_height="wrap_content"
+                android:text="EPS: "
+                style="@style/GroupInfoLabel" />
+            <TextView
+                android:id="@+id/tv_eps"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.414"
+                android:text="6 488"
+                style="@style/GroupInfoText" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2.4dp"/>
+        <LinearLayout
+            android:id="@+id/layout_group_info_5"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/layout_group_industry"
+            style="@style/LayoutGroupInfo">
+            <TextView
+                android:id="@+id/tv_PE_label"
+                android:layout_height="wrap_content"
+                android:text="PE: "
+                style="@style/GroupInfoLabel" />
+            <TextView
+                android:id="@+id/tv_PE"
+                android:layout_height="wrap_content"
+                android:text="21.64"
+                style="@style/GroupInfoText" />
+            <TextView
+                android:id="@+id/tv_PB_label"
+                android:layout_height="wrap_content"
+                android:text="PB: "
+                style="@style/GroupInfoLabel" />
+            <TextView
+                android:id="@+id/tv_PB"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.414"
+                android:text="9.83"
+                style="@style/GroupInfoText" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2.4dp"/>
+        <LinearLayout
+            android:id="@+id/layout_group_info_6"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/layout_group_industry"
+            style="@style/LayoutGroupInfo">
+            <TextView
+                android:id="@+id/tv_ROA_label"
+                android:layout_height="wrap_content"
+                android:text="ROA: "
+                style="@style/GroupInfoLabel" />
+            <TextView
+                android:id="@+id/tv_ROA"
+                android:layout_height="wrap_content"
+                android:text="22.31 %"
+                style="@style/GroupInfoText" />
+            <TextView
+                android:id="@+id/tv_ROE_label"
+                android:layout_height="wrap_content"
+                android:text="ROE: "
+                style="@style/GroupInfoLabel" />
+            <TextView
+                android:id="@+id/tv_ROE"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.414"
+                android:text="7.24 %"
+                style="@style/GroupInfoText" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_news_label"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="16dp"
+            android:text="Tin tức"
+            android:textSize="14sp"
+            android:gravity="center_vertical"
+            android:layout_below="@+id/layout_group_info_6"
+            style="@style/PrimaryText"/>
+        <ListView
+            android:id="@+id/lv_news"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp"
+            android:layout_below="@id/tv_news_label"
+            android:background="@android:color/white"
+            tools:listitem="@layout/partial_layout_news_list_item">
+        </ListView>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_scroll_down"
+        android:layout_width="96dp"
+        android:layout_height="40dp"
+        android:src="@drawable/bg_arrow_down"
+        android:tint="@color/SecondaryTextDark"
+        android:elevation="2dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/layout_main_content"
+        android:background="@android:color/white"
+        tools:ignore="UnusedAttribute" />
+    <include layout="@layout/partial_layout_graph"
+        android:id="@+id/layout_graph"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/iv_scroll_down" />
 </RelativeLayout>

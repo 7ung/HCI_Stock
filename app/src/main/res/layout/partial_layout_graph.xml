@@ -71,4 +71,11 @@
         android:layout_height="match_parent">
 
     </com.github.mikephil.charting.charts.LineChart>
+    <com.github.mikephil.charting.charts.CombinedChart
+        android:id="@+id/combine_chart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+    </com.github.mikephil.charting.charts.CombinedChart>
 </LinearLayout>

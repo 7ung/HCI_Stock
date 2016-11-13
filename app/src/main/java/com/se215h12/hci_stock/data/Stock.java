@@ -1,11 +1,14 @@
 package com.se215h12.hci_stock.data;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import com.se215h12.hci_stock.util.Utils;
 
 /**
  * Created by TungHo on 10/27/2016.
  */
-public class Stock {
+public class Stock implements Parcelable {
 
     private Index parent;
 
@@ -49,6 +52,45 @@ public class Stock {
     }*/
 
     private Stock(){}
+
+    protected Stock(Parcel in) {
+        parent = in.readParcelable(Index.class.getClassLoader());
+        stockName = in.readString();
+        companyName = in.readString();
+        industry = in.readString();
+        price = in.readFloat();
+        refPrice = in.readFloat();
+        openedPrice = in.readFloat();
+        maxPrice = in.readFloat();
+        minPrice = in.readFloat();
+        changed = in.readFloat();
+        changedRatio = in.readFloat();
+        reBuy = in.readInt();
+        reSell = in.readInt();
+        volume = in.readInt();
+        value = in.readFloat();
+        foreignBuy = in.readInt();
+        foreignSell = in.readInt();
+        room = in.readFloat();
+        stockTraded = in.readInt();
+        beta = in.readFloat();
+        EPS = in.readFloat();
+        pe = in.readFloat();
+        roa = in.readInt();
+        roe = in.readInt();
+    }
+
+    public static final Creator<Stock> CREATOR = new Creator<Stock>() {
+        @Override
+        public Stock createFromParcel(Parcel in) {
+            return new Stock(in);
+        }
+
+        @Override
+        public Stock[] newArray(int size) {
+            return new Stock[size];
+        }
+    };
 
     public static Stock create(String parent, String code, String name, String industry) throws Exception {
         Stock st = new Stock();
@@ -148,5 +190,42 @@ public class Stock {
 
     public int getReBuy() {
         return reBuy;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeParcelable(parent, flags);
+        dest.writeString(stockName);
+        dest.writeString(companyName);
+        dest.writeString(industry);
+        dest.writeFloat(price);
+        dest.writeFloat(refPrice);
+        dest.writeFloat(openedPrice);
+        dest.writeFloat(maxPrice);
+        dest.writeFloat(minPrice);
+        dest.writeFloat(changed);
+        dest.writeFloat(changedRatio);
+        dest.writeInt(reBuy);
+        dest.writeInt(reSell);
+        dest.writeInt(getVolume());
+        dest.writeFloat(value);
+        dest.writeInt(foreignBuy);
+        dest.writeInt(foreignSell);
+        dest.writeFloat(room);
+        dest.writeInt(stockTraded);
+        dest.writeFloat(beta);
+        dest.writeFloat(EPS);
+        dest.writeFloat(pe);
+        dest.writeInt(roa);
+        dest.writeInt(roe);
+    }
+
+    public int getVolume() {
+        return volume;
     }
 }

@@ -218,4 +218,56 @@
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_weight">1</item>
     </style>
+
+    <style name="SubPriceLayout">
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:paddingBottom">3dp</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:background">@android:color/white</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="SubPriceLabel">
+        <item name="android:textSize">8sp</item>
+        <item name="android:textColor">@color/SecondaryTextDark</item>
+    </style>
+
+    <style name="SubPriceTextContent">
+        <item name="android:textSize">13sp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="LayoutGroupInfo">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@android:color/white</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:paddingLeft">6.6dp</item>
+        <item name="android:paddingRight">6.6dp</item>
+    </style>
+
+    <style name="GroupInfoLabel">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:textColor">@color/SecondaryTextDark</item>
+    </style>
+
+    <style name="GroupInfoText">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1.618</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:textColor">@color/PrimaryTextDark</item>
+    </style>
+
+
 </resources>

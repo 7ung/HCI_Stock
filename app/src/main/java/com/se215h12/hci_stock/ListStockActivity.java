@@ -26,7 +26,7 @@ import java.util.Comparator;
 /**
  * Created by TungHo on 11/06/2016.
  */
-public class ListStockActivity extends BaseActivity implements View.OnClickListener, AdapterView.OnItemLongClickListener {
+public class ListStockActivity extends BaseActivity implements View.OnClickListener, AdapterView.OnItemLongClickListener, AdapterView.OnItemClickListener {
 
     private ListView mListView;
 
@@ -106,6 +106,7 @@ public class ListStockActivity extends BaseActivity implements View.OnClickListe
     protected void initEventListener() {
         mListView.setLongClickable(true);
         mListView.setOnItemLongClickListener(this);
+        mListView.setOnItemClickListener(this);
     }
 
     private static int currentSort = 1;
@@ -240,13 +241,19 @@ public class ListStockActivity extends BaseActivity implements View.OnClickListe
                 HomeActivity._stock
         ){
             @Override
-            public View getView(int position, @Nullable View convertView,
-                                @NonNull ViewGroup parent) {
+            public View getView(final int position, @Nullable View convertView,
+                                @NonNull final ViewGroup parent) {
                 final View v =  super.getView(position, convertView, parent);
-                Stock st = getItem(position);
+                final Stock st = getItem(position);
                 updateView(v, st);
                 v.setLongClickable(true);
+                v.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        StockDetailActivity.create(ListStockActivity.this, st);
 
+                    }
+                });
                 return v;
             }
         });
@@ -282,5 +289,10 @@ public class ListStockActivity extends BaseActivity implements View.OnClickListe
     public boolean onCreateOptionsMenu(Menu menu) {
         initMenu(menu);
         return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//        StockDetailActivity.create(this, (Stock) parent.getItemAtPosition(position));
     }
 }

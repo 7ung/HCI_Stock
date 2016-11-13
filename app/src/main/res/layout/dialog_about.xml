@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:padding="12dp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Giao Tiếp\nNgười - Máy"
+        android:textSize="32sp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/cyan_a200"
+        android:layout_marginBottom="12dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GVHD:"
+        android:textSize="18sp"
+        android:gravity="left"
+        android:textStyle="bold"
+        android:textColor="@color/PrimaryTextDark"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="24dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ThS Nguyễn Công Hoan"
+        android:textSize="16sp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/PrimaryTextDark"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="8dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sinh viên:"
+        android:textSize="18sp"
+        android:gravity="left"
+        android:textStyle="bold"
+        android:textColor="@color/PrimaryTextDark"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="24dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hồ Hoàng Tùng"
+        android:textSize="16sp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/PrimaryTextDark"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="8dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chu Cẩm Tú Linh"
+        android:textSize="16sp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/PrimaryTextDark"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="8dp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorPrimaryDark"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hỗ trợ:"
+        android:textSize="18sp"
+        android:gravity="left"
+        android:textStyle="bold"
+        android:textColor="@color/PrimaryTextDark"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="24dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sinh viên nhóm 01"
+        android:textSize="16sp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/PrimaryTextDark"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="8dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PhiJay - MP Android Chart"
+        android:textSize="16sp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/PrimaryTextDark"
+        android:textStyle="italic"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="8dp"/>
+</LinearLayout>

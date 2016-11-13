@@ -84,4 +84,14 @@
         <item>CTCK nhận định thị trường 08/11: Nếu ông Trump...</item>
         <item>Một doanh nghiệp vốn hóa 4 tỷ đô chuẩn bị gia nhập sàn Upcom...</item>
     </string-array>
+
+    <string-array name="news">
+        <item>Diễn biến mới về Brexit: Tránh hạ cánh cứng</item>
+        <item>Vegetexco bị phạt hành chính vì chậm nộp hồ sơ đăng ký đại chúng</item>
+        <item>Hủy kết quả chào bán cổ phần, CI5 sẽ hoàn trả chi phí và tiền mua cho nhà đầu tư</item>
+        <item>Đã có kết luận sơ bộ vụ POR11 đối với sản phẩm tôm nước ấm đông lạnh của Việt Nam</item>
+        <item>PCC1 được định giá 36,000 đồng/cp phiên đầu tiên chào sàn HOSE</item>
+        <item>Trong tháng 10 tiêu thụ hơn 28 ngàn xe ô tô</item>
+        <item>Công bố kết quả khắc phục những vi phạm của Formosa</item>
+    </string-array>
 </resources>

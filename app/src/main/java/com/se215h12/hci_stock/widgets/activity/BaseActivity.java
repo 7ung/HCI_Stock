@@ -18,6 +18,7 @@ import android.widget.ArrayAdapter;
 
 import com.se215h12.hci_stock.HomeActivity;
 import com.se215h12.hci_stock.R;
+import com.se215h12.hci_stock.StockDetailActivity;
 
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -80,6 +81,7 @@ public abstract class BaseActivity  extends AppCompatActivity implements SearchV
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 // todo: go to stock detail
+                StockDetailActivity.create(BaseActivity.this, HomeActivity._stock.get(position));
             }
         });
         searchView.setOnQueryTextListener(this);

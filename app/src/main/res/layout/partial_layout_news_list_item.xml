@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TextView  xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/tv_news"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:textColor="@color/colorAccent"
+android:maxLines="2"
+android:paddingLeft="8dp"
+android:paddingRight="8dp"
+android:paddingTop="8dp"
+android:paddingBottom="4dp"
+android:lineSpacingMultiplier="1.2"
+android:background="@android:color/white"
+android:text="MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM"
+android:textSize="12sp"/>
